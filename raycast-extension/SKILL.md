@@ -16,7 +16,7 @@ Raycast extensions are built with React and Node.js (the built-in version is v22
 ## Documentation & Tooling
 
 - **Docs Reference**: Check `references/` for official API documentation.
-- **Sync Docs**: `node scripts/sync-docs.js`
+- **Sync Docs**: `node scripts/sync-docs.mjs`
 - **Query AI**: `node scripts/query-docs.js "How to...?"`
 
 ## Quick Reference (Prefer Raycast Ecosystem)

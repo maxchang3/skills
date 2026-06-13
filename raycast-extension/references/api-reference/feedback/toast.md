@@ -1,5 +1,3 @@
-> For the complete documentation index, see [llms.txt](https://developers.raycast.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://developers.raycast.com/api-reference/feedback/toast.md).
-
 # Toast
 
 When an asynchronous operation is happening or when an error is thrown, it's usually a good idea to keep the user informed about it. Toasts are made for that.
@@ -172,21 +170,3 @@ The options to create a [Toast](#toast) Action.
 | shortcut                                   | The keyboard shortcut for the action.           | [`Keyboard.Shortcut`](https://developers.raycast.com/api-reference/feedback/pages/-MlFvcN8apU1HW0IqNpC#keyboard.shortcut) |
 
 
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter:
-
-```
-GET https://developers.raycast.com/api-reference/feedback/toast.md?ask=<question>
-```
-
-The question should be specific, self-contained, and written in natural language.
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

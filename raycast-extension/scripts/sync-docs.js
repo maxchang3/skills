@@ -43,7 +43,13 @@ async function sync() {
         continue;
       }
       
-      fs.writeFileSync(localFilePath, await res.text());
+      let markdownText = await res.text();
+      
+      // Remove GitBook boilerplate
+      markdownText = markdownText.replace(/> For the complete documentation index[\s\S]*?available as \[Markdown\]\(.*?\)\.\n\n/, '');
+      markdownText = markdownText.replace(/\n---\n\n# Agent Instructions\n[\s\S]*$/, '\n');
+      
+      fs.writeFileSync(localFilePath, markdownText);
     } catch (err) {
       console.error(`Error processing ${url}: ${err.message}`);
     }

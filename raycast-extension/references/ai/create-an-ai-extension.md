@@ -1,5 +1,3 @@
-> For the complete documentation index, see [llms.txt](https://developers.raycast.com/llms.txt). Markdown versions of documentation pages are available by appending `.md` to page URLs; this page is available as [Markdown](https://developers.raycast.com/ai/create-an-ai-extension.md).
-
 # Create an AI Extension
 
 To turn your regular extension into an AI-powered one, you need to add a set of tools that allow Raycast AI to interact with your extension.
@@ -37,21 +35,3 @@ Alternatively, you can open Raycast's AI Chat and start chatting to your AI Exte
 🎉 Congratulations! You built your first AI extension. Now you can start adding more tools to your extension to make it more powerful.
 
 
----
-
-# Agent Instructions
-This documentation is published with GitBook. GitBook is the documentation platform designed so that both humans and AI agents can read, navigate, and reason over technical content effectively. Learn more at gitbook.com.
-
-## Querying This Documentation
-If you need additional information that is not directly available in this page, you can query the documentation dynamically by asking a question.
-
-Perform an HTTP GET request on the current page URL with the `ask` query parameter:
-
-```
-GET https://developers.raycast.com/ai/create-an-ai-extension.md?ask=<question>
-```
-
-The question should be specific, self-contained, and written in natural language.
-The response will contain a direct answer to the question and relevant excerpts and sources from the documentation.
-
-Use this mechanism when the answer is not explicitly present in the current page, you need clarification or additional context, or you want to retrieve related documentation sections.

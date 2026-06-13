@@ -11,5 +11,5 @@ A quick checklist of the most common reasons Raycast extension PRs get rejected 
 - [ ] **Icon**: 512x512px PNG, looks good in both light and dark modes. (No default Raycast icons).
 
 ## 3. Versioning & Docs
-- [ ] **Changelog**: Must use the exact PR placeholder format: `## [Brief Description] - {PR_MERGE_DATE}`.
+- [ ] **Changelog**: Must use the exact PR placeholder format: `## [Brief Description] - {PR_MERGE_DATE}`. (`{PR_MERGE_DATE}` is a placeholder and will be automatically replaced when the PR is merged.)
 - [ ] **README**: Provided if the extension requires API tokens, preferences setup, or has complex usage.

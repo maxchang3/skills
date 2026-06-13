@@ -7,7 +7,7 @@ description: Use when building, debugging, or maintaining Raycast extensions. Tr
 
 ## Overview
 
-Raycast extensions are built with React and Node.js. Prefer the official Raycast ecosystem (`@raycast/api`, `@raycast/utils`) over custom implementations.
+Raycast extensions are built with React and Node.js (the built-in version is v22.22.2). Prefer the official Raycast ecosystem (`@raycast/api`, `@raycast/utils`) over custom implementations.
 
 - **View Commands**: Export a React component. Raycast renders the UI natively.
 - **No-View Commands**: Export an async function; communicate through `showHUD` or `showToast`.

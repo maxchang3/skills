@@ -6,7 +6,7 @@ A personal collection of [Agent Skills](https://agentskills.io/home) tailored fo
 
 ### [raycast-extension](raycast-extension)
 
-Use when building, debugging, or maintaining Raycast extensions.
+Use when building, debugging, or maintaining Raycast extensions. Optimized for cross-platform compatibility and passing Raycast's PR review bot.
 
 ```bash
 npx skills add maxchang3/skills --skill='raycast-extension'

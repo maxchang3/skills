@@ -9,6 +9,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const targetDir = path.join(__dirname, '..', 'references');
 await fs.mkdir(targetDir, { recursive: true });
 
+const agentInstructionsRegex = /\n---\n\n# Agent Instructions\n[\s\S]*$/;
+
 console.log('Fetching llms.txt index...');
 const res = await fetch('https://developers.raycast.com/llms.txt');
 if (!res.ok) throw new Error(`Failed to fetch llms.txt: ${res.statusText}`);
@@ -39,7 +41,7 @@ await Promise.all(urls.map(async (url) => {
     // Strip redundant GitBook boilerplate to save AI tokens
     markdown = markdown
       .replace(/> For the complete documentation index[\s\S]*?available as \[Markdown\]\(.*?\)\.\n\n/, '')
-      .replace(/\n---\n\n# Agent Instructions\n[\s\S]*$/, '\n');
+      .replace(agentInstructionsRegex, '\n');
     
     await fs.writeFile(localFilePath, markdown);
   } catch (err) {
@@ -49,8 +51,12 @@ await Promise.all(urls.map(async (url) => {
 
 console.log('Generating local index.md...');
 const today = new Date().toLocaleDateString("sv-SE");
+
+const cleanLlmsText = llmsText
+  .replace(agentInstructionsRegex, '\n');
+
 const indexContent = `# Raycast Developer Documentation Index\n\n> **Last Synced:** ${today}\n\n` 
-  + llmsText.replace(/https:\/\/developers\.raycast\.com\//g, './');
+  + cleanLlmsText.replace(/https:\/\/developers\.raycast\.com\//g, './');
   
 await fs.writeFile(path.join(targetDir, 'index.md'), indexContent);
 

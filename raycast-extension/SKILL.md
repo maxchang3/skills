@@ -7,6 +7,12 @@ description: Use when building, debugging, or maintaining Raycast extensions. Tr
 
 Raycast extensions are built with React and Node.js (the built-in version is v22.22.2).
 
+### Documentation & Tooling
+
+- **Docs Reference**: Check `references/` for official API documentation.
+- **Sync Docs**: `node scripts/sync-docs.mjs`
+- **Query AI**: `node scripts/query-docs.js "How to...?"`
+
 ### Entry Points
 
 Raycast extensions define executable entry points in `package.json` through either `commands` or `tools`.
@@ -29,11 +35,6 @@ Export a default async function returning JSON-serializable data. Requires Rayca
 
 Commands and tools are unloaded when execution finishes, the menu closes, or the user returns to root search. Do not rely on long-lived in-memory state.
 
-## Documentation & Tooling
-
-- **Docs Reference**: Check `references/` for official API documentation.
-- **Sync Docs**: `node scripts/sync-docs.mjs`
-- **Query AI**: `node scripts/query-docs.js "How to...?"`
 
 ## Quick Reference
 

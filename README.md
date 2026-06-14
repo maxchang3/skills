@@ -17,3 +17,5 @@ npx skills add maxchang3/skills --skill='raycast-extension'
 - [alexi-build/raycast-extensions-skill](https://github.com/alexi-build/raycast-extensions-skill)
 - Raycast's Greptile bot review rules (on [PR #28641](https://github.com/raycast/extensions/pull/28641))
 - Raycast's built-in extension templates
+
+> Recommend to use with [maxchang3/raycast-extension-actions](https://github.com/maxchang3/raycast-extension-actions).

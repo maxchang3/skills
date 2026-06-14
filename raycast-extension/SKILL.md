@@ -89,8 +89,8 @@ Commands and tools are unloaded when execution finishes, the menu closes, or the
 - **Actions First**: Expose primary functionality through `ActionPanel`. Append `…` to actions that open additional flows.
 - **States**: Provide meaningful `List.EmptyView` content. Use `isLoading` during async operations.
 - **Naming**: Use Title Case for commands and actions. Always provide placeholders for text fields.
-- **Publishing**: When the user asks you to prepare the extension for publishing or submit a PR, strictly follow the steps in `resources/publish-checklist.md`.
+- **Publishing**: When the user asks you to prepare the extension for publishing or submit a PR, strictly follow the steps in `assets/publish-checklist.md`.
 
 ## Cookbook Snippets
 
-If you need boilerplate code for UI components like List, Detail, Form, or Cache, please read `resources/cookbook.md`. For comprehensive examples, see `references/examples/`.
+If you need boilerplate code for UI components like List, Detail, Form, or Cache, please read `assets/cookbook.md`. For comprehensive examples, see `references/examples/`.

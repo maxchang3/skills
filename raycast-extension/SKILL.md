@@ -3,8 +3,6 @@ name: raycast-extension
 description: Use when building, debugging, or maintaining Raycast extensions. Triggers for @raycast/api components, extension preferences, Raycast utilities, command architecture, publishing requirements, and cross-platform compatibility.
 ---
 
-# Raycast Extension
-
 ## Overview
 
 Raycast extensions are built with React and Node.js (the built-in version is v22.22.2).

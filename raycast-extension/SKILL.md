@@ -7,11 +7,29 @@ description: Use when building, debugging, or maintaining Raycast extensions. Tr
 
 ## Overview
 
-Raycast extensions are built with React and Node.js (the built-in version is v22.22.2). Prefer the official Raycast ecosystem (`@raycast/api`, `@raycast/utils`) over custom implementations.
+Raycast extensions are built with React and Node.js (the built-in version is v22.22.2).
 
-- **View Commands**: Export a React component. Raycast renders the UI natively.
-- **No-View Commands**: Export an async function; communicate through `showHUD` or `showToast`.
-- **Lifecycle**: Extensions are unloaded when execution finishes or user returns to root search. Do not rely on long-lived in-memory state.
+### Entry Points
+
+Raycast extensions define executable entry points in `package.json` through either `commands` or `tools`.
+
+#### Commands (`package.json > commands`)
+
+The `name` property exactly matches the entry file: `src/{name}.tsx` (or `.ts`).
+
+- **View Commands** (`mode: "view"`) — Export a React component. Raycast renders the UI natively.
+- **No-View Commands** (`mode: "no-view"`) — Export an async function. Interact with users through APIs such as `showHUD` and `showToast`; ideal for quick background actions.
+- **Menu Bar Commands** (`mode: "menu-bar"`) — Export a React component using `MenuBarExtra`, rendered natively in the macOS menu bar.
+
+#### AI Tools (`package.json > tools`)
+
+The `name` property maps directly to `src/tools/{name}.ts`.
+
+Export a default async function returning JSON-serializable data. Requires Raycast Pro for AI interactions.
+
+### Lifecycle
+
+Commands and tools are unloaded when execution finishes, the menu closes, or the user returns to root search. Do not rely on long-lived in-memory state.
 
 ## Documentation & Tooling
 
@@ -19,9 +37,23 @@ Raycast extensions are built with React and Node.js (the built-in version is v22
 - **Sync Docs**: `node scripts/sync-docs.mjs`
 - **Query AI**: `node scripts/query-docs.js "How to...?"`
 
-## Quick Reference (Prefer Raycast Ecosystem)
+## Quick Reference
 
-### 1. `@raycast/utils` (Requires `npm install @raycast/utils`)
+### Scaffolding & Setup
+
+- **Create New Extension**: Open Raycast App -> Search **"Create Extension"** command. This natively generates the official folder structure, `package.json`, and proper configurations. Do not create projects manually from scratch.
+
+### `@raycast/api` (Built-in APIs - Prefer over custom implementations)
+
+| Instead of... | Use API Equivalent | Why? |
+| - | - | - |
+| `fs.unlink()` / `rm` | `trash()` | Safely moves files to the system bin |
+| Custom OAuth | `OAuthService` | Built-in auth (pair with `withAccessToken` from utils) |
+| Manual notifications | `showToast()`, `showHUD()` | Native UX patterns |
+| Custom persistence | `LocalStorage`, `Cache` | Built-in storage |
+| Custom encryption | `password` preference type | Secure credential storage (via Manifest) |
+
+### `@raycast/utils` (Requires `npm install @raycast/utils` - Prefer over custom hooks)
 
 | Instead of... | Use Utils Equivalent | Why? |
 | - | - | - |
@@ -31,16 +63,6 @@ Raycast extensions are built with React and Node.js (the built-in version is v22
 | Manual error toast logic | `showFailureToast` | Standardized error handling |
 | Custom favicon/avatar | `getFavicon()`, `getAvatarIcon()` | Built-in utilities |
 | Custom shell/script execution | `useExec`, `runAppleScript`, `runPowerShellScript` | Handles lifecycle and platform scripts natively |
-
-### 2. `@raycast/api` (Built-in)
-
-| Instead of... | Use API Equivalent | Why? |
-| - | - | - |
-| `fs.unlink()` / `rm` | `trash()` | Safely moves files to the system bin |
-| Custom OAuth | `OAuthService` | Built-in auth (pair with `withAccessToken` from utils) |
-| Manual notifications | `showToast()`, `showHUD()` | Native UX patterns |
-| Custom persistence | `LocalStorage`, `Cache` | Built-in storage |
-| Custom encryption | `password` preference type | Secure credential storage (via Manifest) |
 
 ## Cross-Platform (macOS & Windows)
 

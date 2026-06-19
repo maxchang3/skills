@@ -25,5 +25,12 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add raycast-extension/references/
-          git commit -m "chore: sync raycast docs" || echo "No changes to commit"
-          git push
+          if git diff --cached -- ':(exclude)raycast-extension/references/index.md' | grep -q .; then
+            git commit -m "chore: sync raycast docs"
+            git push
+          elif git diff --cached -- raycast-extension/references/index.md | grep -v '^\-.*Last Synced' | grep -v '^\+.*Last Synced' | grep -q .; then
+            git commit -m "chore: sync raycast docs"
+            git push
+          else
+            git reset HEAD -- .
+          fi

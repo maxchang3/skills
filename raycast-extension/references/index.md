@@ -1,6 +1,6 @@
 # Raycast Developer Documentation Index
 
-> **Last Synced:** 2026-06-22
+> **Last Synced:** 2026-06-25
 
 # Raycast API
 

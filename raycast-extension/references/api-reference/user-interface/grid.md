@@ -2,7 +2,6 @@
 
 The `Grid` component is provided as an alternative to the [List](/api-reference/user-interface/list.md#list) component when the defining characteristic of an item is an image.
 
-{% hint style="info" %}
 Because its API tries to stick as closely to [List](/api-reference/user-interface/list.md#list)'s as possible, changing a view from [List](/api-reference/user-interface/list.md#list) to [Grid](#grid) should be as simple as:
 
 * making sure you're using at least version 1.36.0 of the `@raycast/api` package
@@ -10,8 +9,7 @@ Because its API tries to stick as closely to [List](/api-reference/user-interfac
 * removing the `isShowingDetail` prop from the top-level `List` component, along with all [List.Item](https://developers.raycast.com/api-reference/user-interface/pages/-MeevfnZ89DYcs83emWH#list.item)s' `detail` prop
 * renaming all [List.Item](https://developers.raycast.com/api-reference/user-interface/pages/-MeevfnZ89DYcs83emWH#list.item)s' h`icon` prop to `content`
 * removing all [List.Item](https://developers.raycast.com/api-reference/user-interface/pages/-MeevfnZ89DYcs83emWH#list.item)s' `accessories`, `accessoryIcon` and \`accessoryTitle props; [Grid.Item](#grid.item) does not *currently* support accessories
-* finally, replacing all usages of `List` with `Grid`.
-  {% endhint %}
+* finally, replacing all usages of `List` with `Grid`. {% endhint %}
 
 ![](/files/S8GVBfkCcGY0xuhpuEoB)
 
@@ -21,8 +19,7 @@ The search bar allows users to interact quickly with grid items. By default, [Gr
 
 ### Custom filtering
 
-Sometimes, you may not want to rely on Raycast's filtering, but use/implement your own. If that's the case, you can set the `Grid`'s `filtering` [prop](#props) to false, and the items displayed will be independent of the search bar's text.\
-Note that `filtering` is also implicitly set to false if an `onSearchTextChange` listener is specified. If you want to specify a change listener and *still* take advantage of Raycast's built-in filtering, you can explicitly set `filtering` to true.
+Sometimes, you may not want to rely on Raycast's filtering, but use/implement your own. If that's the case, you can set the `Grid`'s `filtering` [prop](#props) to false, and the items displayed will be independent of the search bar's text. Note that `filtering` is also implicitly set to false if an `onSearchTextChange` listener is specified. If you want to specify a change listener and *still* take advantage of Raycast's built-in filtering, you can explicitly set `filtering` to true.
 
 ```typescript
 import { useEffect, useState } from "react";
@@ -398,7 +395,7 @@ export default function Command() {
 | isLoading            | Indicates whether a loading bar should be shown or hidden below the search bar                                                                                                                                                                                                                                                                                                                                                                                                                      | `boolean`                                                                                      | -       |
 | navigationTitle      | The main title for that view displayed in Raycast                                                                                                                                                                                                                                                                                                                                                                                                                                                   | `string`                                                                                       | -       |
 | onSearchTextChange   | Callback triggered when the search bar text changes.                                                                                                                                                                                                                                                                                                                                                                                                                                                | `(text: string) => void`                                                                       | -       |
-| onSelectionChange    | Callback triggered when the item selection in the grid changes. When the received id is `null`, it means that all items have been filtered out and that there are no item selected                                                                                                                                                                                                                                                                                                                  | `(id: string) => void`                                                                         | -       |
+| onSelectionChange    | Callback triggered when the item selection in the grid changes. When the received id is `null`, it means that all items have been filtered out and that there are no item selected                                                                                                                                                                                                                                                                                                                  | `(id: string \| null) => void`                                                                 | -       |
 | pagination           | Configuration for pagination                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `{ hasMore: boolean; onLoadMore: () => void; pageSize: number }`                               | -       |
 | searchBarAccessory   | Grid.Dropdown that will be shown in the right-hand-side of the search bar.                                                                                                                                                                                                                                                                                                                                                                                                                          | `ReactElement<`[`List.Dropdown.Props`](/api-reference/user-interface/list.md#props)`, string>` | -       |
 | searchBarPlaceholder | Placeholder text that will be shown in the search bar.                                                                                                                                                                                                                                                                                                                                                                                                                                              | `string`                                                                                       | -       |
@@ -543,12 +540,9 @@ export default function Command() {
 
 ### Grid.EmptyView
 
-A view to display when there aren't any items available. Use to greet users with a friendly message if the\
-extension requires user input before it can show any items e.g. when searching for an image, a gif etc.
+A view to display when there aren't any items available. Use to greet users with a friendly message if the extension requires user input before it can show any items e.g. when searching for an image, a gif etc.
 
-Raycast provides a default `EmptyView` that will be displayed if the Grid component either has no children,\
-or if it has children, but none of them match the query in the search bar. This too can be overridden by passing an\
-empty view alongside the other `Grid.Item`s.
+Raycast provides a default `EmptyView` that will be displayed if the Grid component either has no children, or if it has children, but none of them match the query in the search bar. This too can be overridden by passing an empty view alongside the other `Grid.Item`s.
 
 Note that the `EmptyView` is *never* displayed if the `Grid`'s `isLoading` property is true and the search bar is empty.
 
@@ -596,8 +590,7 @@ export default function CommandWithCustomEmptyView() {
 
 A item in the [Grid](#grid).
 
-This is one of the foundational UI components of Raycast. A grid item represents a single entity. It can be an image, an emoji, a GIF etc. You most likely want to perform actions on this item, so make it clear\
-to the user what this item is about.
+This is one of the foundational UI components of Raycast. A grid item represents a single entity. It can be an image, an emoji, a GIF etc. You most likely want to perform actions on this item, so make it clear to the user what this item is about.
 
 #### Example
 
@@ -622,7 +615,7 @@ export default function Command() {
 | actions                                   | An ActionPanel that will be updated for the selected grid item.                                                                                                                                     | `React.ReactNode`                                                                                                                                                                                                                                                                                                                                           | -       |
 | id                                        | ID of the item. This string is passed to the `onSelectionChange` handler of the Grid when the item is selected. Make sure to assign each item a unique ID or a UUID will be auto generated.         | `string`                                                                                                                                                                                                                                                                                                                                                    | -       |
 | keywords                                  | An optional property used for providing additional indexable strings for search. When filtering the list in Raycast through the search bar, the keywords will be searched in addition to the title. | `string[]`                                                                                                                                                                                                                                                                                                                                                  | -       |
-| quickLook                                 | Optional information to preview files with Quick Look. Toggle the preview ith Action.ToggleQuickLook.                                                                                               | `{ name?: string; path: "fs".PathLike }`                                                                                                                                                                                                                                                                                                                    | -       |
+| quickLook                                 | Optional information to preview files with Quick Look. Toggle the preview ith Action.ToggleQuickLook.                                                                                               | `{ name?: string` or `null; path: "fs".PathLike }`                                                                                                                                                                                                                                                                                                          | -       |
 | subtitle                                  | An optional subtitle displayed below the title.                                                                                                                                                     | `string`                                                                                                                                                                                                                                                                                                                                                    | -       |
 | title                                     | An optional title displayed below the content.                                                                                                                                                      | `string`                                                                                                                                                                                                                                                                                                                                                    | -       |
 

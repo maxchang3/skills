@@ -90,13 +90,13 @@ Use [showToast](#showtoast) to create and show a Toast.
 
 #### Properties
 
-| Property                                          | Description                                                                                                        | Type                                                                                                                          |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| message<mark style="color:red;">\*</mark>         | An additional message for the Toast. Useful to show more information, e.g. an identifier of a newly created asset. | `string`                                                                                                                      |
-| primaryAction<mark style="color:red;">\*</mark>   | The primary Action the user can take when hovering on the Toast.                                                   | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) |
-| secondaryAction<mark style="color:red;">\*</mark> | The secondary Action the user can take when hovering on the Toast.                                                 | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) |
-| style<mark style="color:red;">\*</mark>           | The style of a Toast.                                                                                              | [`Action.Style`](https://developers.raycast.com/api-reference/feedback/pages/-MiwANRaRK1jG1WJw3dy#action.style)               |
-| title<mark style="color:red;">\*</mark>           | The title of a Toast. Displayed on the top.                                                                        | `string`                                                                                                                      |
+| Property        | Description                                                                                                        | Type                                                                                                                                         |
+| --------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| message         | An additional message for the Toast. Useful to show more information, e.g. an identifier of a newly created asset. | `string` or `undefined`                                                                                                                      |
+| primaryAction   | The primary Action the user can take when hovering on the Toast.                                                   | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) or `undefined` |
+| secondaryAction | The secondary Action the user can take when hovering on the Toast.                                                 | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) or `undefined` |
+| style           | The style of a Toast.                                                                                              | [`Action.Style`](https://developers.raycast.com/api-reference/feedback/pages/-MiwANRaRK1jG1WJw3dy#action.style)                              |
+| title           | The title of a Toast. Displayed on the top.                                                                        | `string`                                                                                                                                     |
 
 #### Methods
 
@@ -145,9 +145,7 @@ export default async function Command() {
 
 Defines the visual style of the Toast.
 
-Use [Toast.Style.Success](#toast.style) for confirmations and [Toast.Style.Failure](#toast.style) for displaying errors.\
-Use [Toast.Style.Animated](#toast.style) when your Toast should be shown until a process is completed.\
-You can hide it later by using [Toast.hide](#toast) or update the properties of an existing Toast.
+Use [Toast.Style.Success](#toast.style) for confirmations and [Toast.Style.Failure](#toast.style) for displaying errors. Use [Toast.Style.Animated](#toast.style) when your Toast should be shown until a process is completed. You can hide it later by using [Toast.hide](#toast) or update the properties of an existing Toast.
 
 #### Enumeration members
 

@@ -6,10 +6,7 @@ This set of utilities to work with Raycast commands.
 
 ### launchCommand
 
-Launches another command. If the command does not exist, or if it's not enabled, an error will be thrown.\
-If the command is part of another extension, the user will be presented with a permission alert.\
-Use this method if your command needs to open another command based on user interaction,\
-or when an immediate background refresh should be triggered, for example when a command needs to update an associated menu-bar command.
+Launches another command. If the command does not exist, or if it's not enabled, an error will be thrown. If the command is part of another extension, the user will be presented with a permission alert. Use this method if your command needs to open another command based on user interaction, or when an immediate background refresh should be triggered, for example when a command needs to update an associated menu-bar command.
 
 #### Signature
 
@@ -84,26 +81,26 @@ A parameter object used to decide which command should be launched and what data
 
 The options that can be used when launching a command from the same extension.
 
-| Property                               | Description                                                                                                                                                             | Type                                                                   |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| name<mark style="color:red;">\*</mark> | Command name as defined in the extension's manifest                                                                                                                     | `string`                                                               |
-| type<mark style="color:red;">\*</mark> | LaunchType.UserInitiated or LaunchType.Background                                                                                                                       | [`LaunchType`](/api-reference/environment.md#launchtype)               |
-| arguments                              | Optional object for the argument properties and values as defined in the extension's manifest, for example: `{ "argument1": "value1" }`                                 | [`Arguments`](/information/lifecycle/arguments.md#arguments) or `null` |
-| context                                | Arbitrary object for custom data that should be passed to the command and accessible as LaunchProps; the object must be JSON serializable (Dates and Buffers supported) | [`LaunchContext`](#launchcontext) or `null`                            |
-| fallbackText                           | Optional string to send as fallback text to the command                                                                                                                 | `string` or `null`                                                     |
+| Property                               | Description                                                                                                                                                             | Type                                                         |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| name<mark style="color:red;">\*</mark> | Command name as defined in the extension's manifest                                                                                                                     | `string`                                                     |
+| type<mark style="color:red;">\*</mark> | LaunchType.UserInitiated or LaunchType.Background                                                                                                                       | [`LaunchType`](/api-reference/environment.md#launchtype)     |
+| arguments                              | Optional object for the argument properties and values as defined in the extension's manifest, for example: `{ "argument1": "value1" }`                                 | [`Arguments`](/information/lifecycle/arguments.md#arguments) |
+| context                                | Arbitrary object for custom data that should be passed to the command and accessible as LaunchProps; the object must be JSON serializable (Dates and Buffers supported) | [`LaunchContext`](#launchcontext)                            |
+| fallbackText                           | Optional string to send as fallback text to the command                                                                                                                 | `string`                                                     |
 
 #### InterExtensionLaunchOptions
 
 The options that can be used when launching a command from a different extension.
 
-| Property                                            | Description                                                                                                                                                             | Type                                                                   |
-| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| extensionName<mark style="color:red;">\*</mark>     | When launching command from a different extension, the extension name (as defined in the extension's manifest) is necessary                                             | `string`                                                               |
-| name<mark style="color:red;">\*</mark>              | Command name as defined in the extension's manifest                                                                                                                     | `string`                                                               |
-| ownerOrAuthorName<mark style="color:red;">\*</mark> | When launching command from a different extension, the owner or author (as defined in the extension's manifest) is necessary                                            | `string`                                                               |
-| type<mark style="color:red;">\*</mark>              | LaunchType.UserInitiated or LaunchType.Background                                                                                                                       | [`LaunchType`](/api-reference/environment.md#launchtype)               |
-| arguments                                           | Optional object for the argument properties and values as defined in the extension's manifest, for example: `{ "argument1": "value1" }`                                 | [`Arguments`](/information/lifecycle/arguments.md#arguments) or `null` |
-| context                                             | Arbitrary object for custom data that should be passed to the command and accessible as LaunchProps; the object must be JSON serializable (Dates and Buffers supported) | [`LaunchContext`](#launchcontext) or `null`                            |
-| fallbackText                                        | Optional string to send as fallback text to the command                                                                                                                 | `string` or `null`                                                     |
+| Property                                            | Description                                                                                                                                                             | Type                                                         |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| extensionName<mark style="color:red;">\*</mark>     | When launching command from a different extension, the extension name (as defined in the extension's manifest) is necessary                                             | `string`                                                     |
+| name<mark style="color:red;">\*</mark>              | Command name as defined in the extension's manifest                                                                                                                     | `string`                                                     |
+| ownerOrAuthorName<mark style="color:red;">\*</mark> | When launching command from a different extension, the owner or author (as defined in the extension's manifest) is necessary                                            | `string`                                                     |
+| type<mark style="color:red;">\*</mark>              | LaunchType.UserInitiated or LaunchType.Background                                                                                                                       | [`LaunchType`](/api-reference/environment.md#launchtype)     |
+| arguments                                           | Optional object for the argument properties and values as defined in the extension's manifest, for example: `{ "argument1": "value1" }`                                 | [`Arguments`](/information/lifecycle/arguments.md#arguments) |
+| context                                             | Arbitrary object for custom data that should be passed to the command and accessible as LaunchProps; the object must be JSON serializable (Dates and Buffers supported) | [`LaunchContext`](#launchcontext)                            |
+| fallbackText                                        | Optional string to send as fallback text to the command                                                                                                                 | `string`                                                     |
 
 

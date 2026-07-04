@@ -151,7 +151,7 @@ export default function Main() {
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | ------- |
 | title<mark style="color:red;">\*</mark> | The title of the item.                                                                                                     | `string`                                                                                                                    | -       |
 | icon                                    | An icon to illustrate the value of the item.                                                                               | [`Image.ImageLike`](https://developers.raycast.com/api-reference/user-interface/pages/-MiwANRdFuMoKkR6at_E#image.imagelike) | -       |
-| text                                    | The text value of the item. Specifying `color` will display the text in the provided color. Defaults to Color.PrimaryText. | `string` or `{ color?:` [`Color`](/api-reference/user-interface/colors.md#color)`; value: string }`                         | -       |
+| text                                    | The text value of the item. Specifying `color` will display the text in the provided color. Defaults to Color.PrimaryText. | `string` or `{ color?:` [`Color`](/api-reference/user-interface/colors.md#color) or `null; value: string }`                 | -       |
 
 ### Detail.Metadata.Link
 

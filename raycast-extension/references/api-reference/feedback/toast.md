@@ -95,7 +95,7 @@ Use [showToast](#showtoast) to create and show a Toast.
 | message         | An additional message for the Toast. Useful to show more information, e.g. an identifier of a newly created asset. | `string` or `undefined`                                                                                                                      |
 | primaryAction   | The primary Action the user can take when hovering on the Toast.                                                   | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) or `undefined` |
 | secondaryAction | The secondary Action the user can take when hovering on the Toast.                                                 | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) or `undefined` |
-| style           | The style of a Toast.                                                                                              | [`Action.Style`](https://developers.raycast.com/api-reference/feedback/pages/-MiwANRaRK1jG1WJw3dy#action.style)                              |
+| style           | The style of a Toast.                                                                                              | [`Toast.Style`](#toast.style)                                                                                                                |
 | title           | The title of a Toast. Displayed on the top.                                                                        | `string`                                                                                                                                     |
 
 #### Methods
@@ -139,7 +139,7 @@ export default async function Command() {
 | message                                 | An additional message for the Toast. Useful to show more information, e.g. an identifier of a newly created asset. | `string`                                                                                                                      |
 | primaryAction                           | The primary Action the user can take when hovering on the Toast.                                                   | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) |
 | secondaryAction                         | The secondary Action the user can take when hovering on the Toast.                                                 | [`Alert.ActionOptions`](https://developers.raycast.com/api-reference/feedback/pages/WwoLgel1tKGMFIlb32QR#alert.actionoptions) |
-| style                                   | The style of a Toast.                                                                                              | [`Action.Style`](https://developers.raycast.com/api-reference/feedback/pages/-MiwANRaRK1jG1WJw3dy#action.style)               |
+| style                                   | The style of a Toast.                                                                                              | [`Toast.Style`](#toast.style)                                                                                                 |
 
 ### Toast.Style
 

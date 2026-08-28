@@ -374,26 +374,26 @@ The options for a client ID metadata document authorization request via [authori
 
 Values of [AuthorizationRequest](#oauth.authorizationrequest). The PKCE client automatically generates the values for you and returns them for [authorizationRequest](#oauth.authorizationrequest)
 
-| Property                                        | Description                           | Type     |
-| ----------------------------------------------- | ------------------------------------- | -------- |
-| clientId<mark style="color:red;">\*</mark>      | The resolved OAuth `client_id` value. | `string` |
-| codeChallenge<mark style="color:red;">\*</mark> | The PKCE `code_challenge` value.      | `string` |
-| codeVerifier<mark style="color:red;">\*</mark>  | The PKCE `code_verifier` value.       | `string` |
-| redirectURI<mark style="color:red;">\*</mark>   | The OAuth `redirect_uri` value.       | `string` |
-| state<mark style="color:red;">\*</mark>         | The OAuth `state` value.              | `string` |
+| Property                                        | Description                                                                                                                                                                                                                                       | Type     |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| codeChallenge<mark style="color:red;">\*</mark> | The PKCE `code_challenge` value.                                                                                                                                                                                                                  | `string` |
+| codeVerifier<mark style="color:red;">\*</mark>  | The PKCE `code_verifier` value.                                                                                                                                                                                                                   | `string` |
+| redirectURI<mark style="color:red;">\*</mark>   | The OAuth `redirect_uri` value.                                                                                                                                                                                                                   | `string` |
+| state<mark style="color:red;">\*</mark>         | The OAuth `state` value.                                                                                                                                                                                                                          | `string` |
+| clientId                                        | The resolved OAuth `client_id` value. Requests created by OAuth.PKCEClient.authorizationRequest always set it. It is optional so that the parameter object stays constructible the way it was before client ID metadata documents were supported. | `string` |
 
 ### OAuth.AuthorizationRequest
 
 The request returned by [authorizationRequest](#oauth.authorizationrequest). Can be used as direct input to [authorize](#oauth.pkceclient-authorize), or to extract parameters for constructing a custom URL in [AuthorizationOptions](#oauth.authorizationoptions).
 
-| Property                                        | Description                           | Type           |
-| ----------------------------------------------- | ------------------------------------- | -------------- |
-| clientId<mark style="color:red;">\*</mark>      | The resolved OAuth `client_id` value. | `string`       |
-| codeChallenge<mark style="color:red;">\*</mark> | The PKCE `code_challenge` value.      | `string`       |
-| codeVerifier<mark style="color:red;">\*</mark>  | The PKCE `code_verifier` value.       | `string`       |
-| redirectURI<mark style="color:red;">\*</mark>   | The OAuth `redirect_uri` value.       | `string`       |
-| state<mark style="color:red;">\*</mark>         | The OAuth `state` value.              | `string`       |
-| toURL<mark style="color:red;">\*</mark>         |                                       | `() => string` |
+| Property                                        | Description                                                                                                                                                                                       | Type           |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| clientId<mark style="color:red;">\*</mark>      | The resolved OAuth `client_id` value: the one passed to OAuth.PKCEClient.authorizationRequest, or OAuth.clientIdMetadataDocument for clients using OAuth.RedirectMethod.ClientIdMetadataDocument. | `string`       |
+| codeChallenge<mark style="color:red;">\*</mark> | The PKCE `code_challenge` value.                                                                                                                                                                  | `string`       |
+| codeVerifier<mark style="color:red;">\*</mark>  | The PKCE `code_verifier` value.                                                                                                                                                                   | `string`       |
+| redirectURI<mark style="color:red;">\*</mark>   | The OAuth `redirect_uri` value.                                                                                                                                                                   | `string`       |
+| state<mark style="color:red;">\*</mark>         | The OAuth `state` value.                                                                                                                                                                          | `string`       |
+| toURL<mark style="color:red;">\*</mark>         |                                                                                                                                                                                                   | `() => string` |
 
 #### Methods
 

@@ -1,6 +1,6 @@
 # Action Panel
 
-![](/files/EDh59CKqojRCu2iZn1yA)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-25a03b5271959426230e724a733f30e7597dd1bf%2Faction-panel.webp?alt=media)
 
 ## API Reference
 

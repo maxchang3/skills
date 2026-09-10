@@ -1,5 +1,7 @@
 # Terminology
 
+An explanation of various terms used in this documentation.
+
 ## Action
 
 Actions are accessible via the [Action Panel](#action-panel) in a [command](#command). They are little functionality to control something; for example, to add a label to the selected GitHub issue, copy the link to a Linear issue, or anything else. Actions can have assigned keyboard shortcuts.

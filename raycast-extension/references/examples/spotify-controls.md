@@ -1,12 +1,14 @@
 # Spotify Controls
 
+This example shows how to bundle multiple scripts into a single extension.
+
 {% hint style="info" %}
 The source code of the example can be found [here](https://github.com/raycast/extensions/tree/main/extensions/spotify-controls#readme). You can install it [here](https://www.raycast.com/thomas/spotify-controls).
 {% endhint %}
 
 This example shows how to build commands that don't show a UI in Raycast. This type of command is useful for interactions with other apps such as skipping songs in Spotify or just simply running some scripts that don't need visual confirmation.
 
-![Example: Control the Spotify macOS app from Raycast](/files/HxEeMXnBBu5ARHkBJ129)
+![Example: Control the Spotify macOS app from Raycast](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8a6b74f0afa581918036d18742c8c0e3baa4a37e%2Fexample-spotify-controls.webp?alt=media)
 
 ## Control Spotify macOS app
 

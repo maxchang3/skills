@@ -1,12 +1,14 @@
 # Write Evals for Your AI Extension
 
+Make your AI Extension more reliable by writing evals.
+
 We all know that AI is not always reliable. This is why it's important to write evals for your AI Extension. Evals allow you to test your AI Extension and make sure it behaves as expected.
 
 ## Add an Eval
 
 The easiest way to add an eval is to first use your AI Extension. Then, once Raycast AI used your tools to finish its response, you can use the Copy Eval action to copy the eval to your clipboard.
 
-![Copy Eval](/files/X076JiOBNME89i8p3y9o)
+![Copy Eval](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b91e1651293f819adc528349025ebe722373f66e%2Fcopy-eval.webp?alt=media)
 
 You can then paste the eval into the `evals` array in the [`package.json` file](/information/manifest.md).
 

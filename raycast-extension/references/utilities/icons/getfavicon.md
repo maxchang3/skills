@@ -4,7 +4,7 @@ Icon showing the favicon of a website.
 
 A favicon (favorite icon) is a tiny icon included along with a website, which is displayed in places like the browser's address bar, page tabs, and bookmarks menu.
 
-![Favicon example](/files/MF8rBzZXaFDx4I5MdQWu)
+![Favicon example](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8383499b76a723de43e610079031cd2543c52a66%2Futils-favicon.png?alt=media)
 
 ## Signature
 

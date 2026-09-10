@@ -12,7 +12,7 @@ However, if your provider doesn't support PKCE, you can use our [PKCE proxy](htt
 
 ## OAuth Flow
 
-![](/files/4BR0dw7NodK8i3shfTho)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-73fbf2da0684ab57bbdba779e06b3bbcfb895a01%2Foauth-overlay-twitter.webp?alt=media)
 
 The OAuth flow from an extension looks like this:
 
@@ -24,7 +24,7 @@ The OAuth flow from an extension looks like this:
 
 When the flow is complete, the extension has received an access token from the provider and can perform API calls. The API provides functions for securely storing and retrieving token sets, so that an extension can check whether the user is already logged in and whether an expired access token needs to be refreshed. Raycast also automatically shows a logout preference.
 
-![](/files/SFTqaYShuPbXpr3QmgIF)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-fa10ad21218f2a0f28d9a4fef60575518e1c0f1a%2Foauth-overlay-twitter-success.webp?alt=media)
 
 ## OAuth App
 

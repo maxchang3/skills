@@ -11,7 +11,7 @@ Because its API tries to stick as closely to [List](/api-reference/user-interfac
 * removing all [List.Item](https://developers.raycast.com/api-reference/user-interface/pages/-MeevfnZ89DYcs83emWH#list.item)s' `accessories`, `accessoryIcon` and \`accessoryTitle props; [Grid.Item](#grid.item) does not *currently* support accessories
 * finally, replacing all usages of `List` with `Grid`. {% endhint %}
 
-![](/files/S8GVBfkCcGY0xuhpuEoB)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4bb3d7e88613cf9ccba01c798f5d2aa62edfaeac%2Fgrid.webp?alt=media)
 
 ## Search Bar
 
@@ -546,7 +546,7 @@ Raycast provides a default `EmptyView` that will be displayed if the Grid compon
 
 Note that the `EmptyView` is *never* displayed if the `Grid`'s `isLoading` property is true and the search bar is empty.
 
-![Grid EmptyView illustration](/files/s6aDd2fApHeaFIDeNSfs)
+![Grid EmptyView illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ce76aa8900d21be445aba5e7acd3ef7fa7687e9e%2Fgrid-empty-view.webp?alt=media)
 
 #### Example
 
@@ -629,7 +629,7 @@ Sections can specify their own `columns`, `fit`, `aspectRatio` and `inset` props
 
 #### Example
 
-![](/files/MfwsgxrHINkI6Ia2ndaM)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-274bdfb26a191e298c4248a6d7031d08d725f484%2Fgrid-styled-sections.webp?alt=media)
 
 {% tabs %}
 {% tab title="GridWithSection.tsx" %}
@@ -700,7 +700,7 @@ export default function Command() {
 
 An interface describing an accessory view in a `Grid.Item`.
 
-![Grid.Item accessories illustration](/files/GQZ4qeKv0KK4Bc3ZkCw8)
+![Grid.Item accessories illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a7b63e239c1418d77e7ec242f0e34c711a44dd7d%2Fgrid-item-accessories.webp?alt=media)
 
 ### Grid.Inset
 

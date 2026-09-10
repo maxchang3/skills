@@ -1,5 +1,7 @@
 # Publish an Extension
 
+Learn how to share your extension with our community.
+
 Before you publish your extension, take a look at [how to prepare your extension](/basics/prepare-an-extension-for-store.md) for the Store. Making sure you follow the guidelines is the best way to help your extension pass the review.
 
 ### Validate your extension
@@ -50,7 +52,7 @@ We're still figuring things out and updating our guidelines. If something is unc
 
 Once your extension is published in the Raycast Store, you can share it with our community. Open the Manage Extensions command, search for your extension and press `⌘` `⌥` `.` to copy the link.
 
-![Manage your extensions](/files/GIVc69jIF142uhyoQeEB)
+![Manage your extensions](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ce1f47d3a92c1377fa2cb9ace2eb4bee7cfaa58b%2Fbasics-manage-extensions.webp?alt=media)
 
 🚀 Now it's time to share your work! Tweet about your extension, share it with our [Slack community](https://raycast.com/community) or send it to your teammates.
 

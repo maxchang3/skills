@@ -1,5 +1,7 @@
 # Follow Best Practices for AI Extensions
 
+Make the most out of your AI Extension by following best practices.
+
 Working with LLMs can be tricky. Here are some best practices to make the most out of your AI Extension.
 
 1. Use [Confirmations](/ai/learn-core-concepts-of-ai-extensions.md#confirmations) to keep the human in the loop. You can use them dynamically based on the user's input. For example, you might ask for confirmation if moving a file would overwrite an existing file but not if it would create a new file.

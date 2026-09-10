@@ -53,7 +53,7 @@ export default function Command() {
 
 If your development server is running, the command should appear in your root search, and running the command should result in the `GitHub` icon appearing in your menu bar.
 
-![GitHub Pull Requests menu bar command](/files/KVJtD6eauqrhSi3BW27d)
+![GitHub Pull Requests menu bar command](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d11d9547c3a590b50f9beacaf2211ee0056e4372%2Fmenu-bar-command.gif?alt=media)
 
 {% hint style="info" %}
 macOS has the final say on whether a given menu bar extra is displayed. If you have a lot of items there, it is possible that the command we just ran doesn't show up. If that's the case, try to clear up some space in the menu bar, either by closing some of the items you don't need or by hiding them using [HiddenBar](https://github.com/dwarvesf/hidden), [Bartender](https://www.macbartender.com/), or similar apps.
@@ -74,11 +74,11 @@ Of course, our pull request command wouldn't be of that much use if we had to te
 
 Your root search should look similar to:
 
-![Menu Bar Command - Activate Background Refresh](/files/XdvunGDp8lV0jTb8uqqS)
+![Menu Bar Command - Activate Background Refresh](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-25f5659825806f33bb7cb303da04680bdb29bcbf%2Fmenu-bar-activate-command.webp?alt=media)
 
 Running it once should activate it to:
 
-![Menu Bar Command - Refresh](/files/F1YGGzN33r1I6ULvlEFv)
+![Menu Bar Command - Refresh](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8f655dafc225472ab9096af040de0243f651dfb3%2Fmenu-bar-refresh.webp?alt=media)
 
 ## Lifecycle
 
@@ -98,7 +98,7 @@ If your `menu-bar` command also makes use of [background refresh](/information/l
 
 {% hint style="info" %}
 To ease testing, commands configured to run in the background have an extra action in development mode:\
-![Menu Bar Command - Run in Background](/files/WJ5AujlkdjYUS3UK3Ao7)
+![Menu Bar Command - Run in Background](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-5132ca095672c674588b6bc23879af43d9a303d9%2Fmenu-bar-run-in-background.webp?alt=media)
 {% endhint %}
 
 ### When the user clicks the command's icon / title in the menu bar

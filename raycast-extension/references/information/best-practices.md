@@ -1,5 +1,7 @@
 # Best Practices
 
+Tips to guarantee a good user experience for your extensions.
+
 ## General
 
 ### Handle errors
@@ -84,7 +86,7 @@ Before submitting data, it is important to ensure all required form controls are
 
 In Raycast, validation can be fully controlled from the API. To keep the same behavior as we have natively, the proper way of usage is to validate a `value` in the `onBlur` callback, update the `error` of the item and keep track of updates with the `onChange` callback to drop the `error` value. The [useForm](/utilities/react-hooks/useform.md) utils hook nicely wraps this behavior and is the recommended way to do deal with validations.
 
-![](/files/iqyp1fz6BGtnV8eqqHch)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-06326f9b2b6de5d39b9c8aa37e677b23c122f26e%2Fform-validation.webp?alt=media)
 
 {% hint style="info" %}
 Keep in mind that if the Form has any errors, the [`Action.SubmitForm`](https://developers.raycast.com/information/pages/-MiwANRaRK1jG1WJw3dy#action.submitform) `onSubmit` callback won't be triggered.

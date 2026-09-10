@@ -2,7 +2,7 @@
 
 When the user takes an action that has the side effect of closing Raycast (for example when copying something in the [Clipboard](/api-reference/clipboard.md)), you can use a HUD to confirm that the action worked properly.
 
-![](/files/m0UfB9PkHck48Uel6Bmk)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-690446648e9c7bb76403f9d177ecfc8a3851ee8a%2Fhud.webp?alt=media)
 
 ## API Reference
 

@@ -347,7 +347,7 @@ Over the past few releases, we've made some additions to the API to better suppo
 
 ## Introducing the Extension Issues Dashboard
 
-![](/files/XAvpR83ansTwHf6REDIf)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e3c7a6de170fa071b3e0caf1ac8f93d283255a91%2Fextension-issues.webp?alt=media)
 
 The new Extension Issues Dashboard is designed to help you quickly troubleshoot and resolve issues in any of your extensions by providing real-time visibility into errors encountered by users. You can access it at <https://www.raycast.com/extension-issues>, or by using the new `View Issues` action.
 
@@ -703,7 +703,7 @@ The new Extension Issues Dashboard is designed to help you quickly troubleshoot 
 
 * **Grid**: the `Grid` component accepts three new props that should give extension authors more flexibility: `columns`, `fit` and `aspectRatio`.
 
-![](/files/MfwsgxrHINkI6Ia2ndaM)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-274bdfb26a191e298c4248a6d7031d08d725f484%2Fgrid-styled-sections.webp?alt=media)
 
 * **Grid Sections** don't all have to look the same anymore! The grid `Section` component now *also* accepts the `columns`, `fit` and `aspectRatio` props. When specified, they will override the value of the parent `Grid` component's prop.
 * **List**: The list supports a new property for configuring how sections are ordered. Setting `filtering={{ keepSectionOrder: true }}` ensures that the section order is not changed based on items' ranking values; this can be useful for use cases where a small number of fix sections should always appear in the same order when the user filters the list. We are deprecating the `enableFiltering` property.
@@ -869,7 +869,7 @@ The new Extension Issues Dashboard is designed to help you quickly troubleshoot 
 
 The `<Grid />` component's made its way to our API. It's perfect to layout media-heavy information, such as icons, images or colors. The component allows you to layout differently sized items. We designed [its API](https://developers.raycast.com/api-reference/user-interface/list) close to the `<List />` component for smooth adoption.
 
-![](/files/S8GVBfkCcGY0xuhpuEoB)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4bb3d7e88613cf9ccba01c798f5d2aa62edfaeac%2Fgrid.webp?alt=media)
 
 ### 🐞 Fixes
 
@@ -1194,7 +1194,7 @@ The `<Grid />` component's made its way to our API. It's perfect to layout media
 
 It's happening! We're opening up our API and store for public beta.
 
-![](/files/o0MVOFVT9hOcWlh1U6sy)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-6de7d7ba17dddccdb8afa568bde72d292a5e2920%2Fchangelog-hello-world.webp?alt=media)
 
 This is a big milestone for our community. We couldn't have pulled it off without our alpha testers. A massive shoutout to everybody who helped us shape the API. Now let's start building. We can't wait to see what you will come up with.
 

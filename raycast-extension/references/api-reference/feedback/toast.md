@@ -8,7 +8,7 @@ Additionally, Toasts can have some actions associated to the action they are abo
 The `showToast()` will fallback to [showHUD()](/api-reference/feedback/hud.md#showhud) if the Raycast window is closed.
 {% endhint %}
 
-![](/files/p2Ao61w6yFE9oEI2qsvA)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-607b51d1dc3e47c6cdff37be217a0e4d42368a57%2Ftoast.webp?alt=media)
 
 ## API Reference
 
@@ -149,11 +149,11 @@ Use [Toast.Style.Success](#toast.style) for confirmations and [Toast.Style.Failu
 
 #### Enumeration members
 
-| Name     | Value                            |
-| -------- | -------------------------------- |
-| Animated | ![](/files/IVXRyPP5lT6Ow6fBJWZt) |
-| Success  | ![](/files/r5wjQiSm5F802e6Tunoi) |
-| Failure  | ![](/files/SAJ6DPeJISjOjTrkEbi8) |
+| Name     | Value                                                                                                                                                                                                          |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Animated | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-7e62989ba2fea14db0967e09bb5bfaf84706e12d%2Ftoast-animated.webp?alt=media) |
+| Success  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-dce0b170c3e47fa4c5525e1a0a74600350006445%2Ftoast-success.webp?alt=media)  |
+| Failure  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-96a3cfd7aaec6933c18481f6228bb647093217ff%2Ftoast-failure.webp?alt=media)  |
 
 ### Toast.ActionOptions
 

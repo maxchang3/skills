@@ -20,7 +20,7 @@ To make fetching a command's Deeplink easier, each command in the Raycast root n
 Whenever a command is launched using a Deeplink, Raycast will ask you to confirm that you want to run the command. This is to ensure that you are aware of the command you are running.
 {% endhint %}
 
-![](/files/dL9E24sdeegBvQ03RPAb)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-612ba5e034fc166e1bc0f57d0035cf242bcf0011%2Fdeeplink-confirmation.webp?alt=media)
 
 ## Query Parameters
 

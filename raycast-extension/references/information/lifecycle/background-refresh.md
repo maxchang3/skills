@@ -61,7 +61,7 @@ For local commands under development, errors are shown as usual via the console.
 * Run in Background: this immediately runs the command with `environment.launchType` set to `LaunchType.Background`.
 * Show Error: if the command could not be loaded or an uncaught runtime exception was thrown, the full error can be shown in the Raycast error overlay for development. This action is also shown to users of the installed Store command and provides actions to copy and report the error on the production error overlay.
 
-![](/files/Dat5EhYxbH0gMsKf8K1E)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-f56fdf8a10d8451837247c60012963ab7db7c947%2Fbackground-refresh-error.webp?alt=media)
 
 When the background run leads to an error, users will also see a warning icon on the root search command and a tooltip with a hint to show the error via the Action Panel. The tooltip over the subtitle of a command shows the last run time.
 
@@ -71,7 +71,7 @@ You can launch the built-in root search command "Extension Diagnostics" to see w
 
 For scheduled commands, Raycast automatically adds command preferences that give users the options to enable and disable background refresh. Preferences also show the last run time of the command.
 
-![](/files/3kB7xb0OVS2a96w717Fc)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-475411d88fef4886f8a3f30521b5dedf3f8b4afc%2Fbackground-refresh-preferences.webp?alt=media)
 
 When a user installs the command via the Store, background refresh is initially *disabled* and is activated either when the user opens the command for the first time or enables background refresh in preferences. (This is to avoid automatically running commands in the background without the user being aware of it.)
 

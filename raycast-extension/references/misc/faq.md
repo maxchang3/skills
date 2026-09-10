@@ -1,5 +1,7 @@
 # FAQ
 
+Answers to the most frequently asked questions.
+
 <details>
 
 <summary>What's the difference between <a href="https://github.com/raycast/script-commands">script commands</a> and extensions?</summary>

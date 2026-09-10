@@ -1,5 +1,7 @@
 # Debug an Extension
 
+This guide covers how to find and fix bugs in your extension.
+
 Bugs are unavoidable. Therefore it's important to have an easy way to discover and fix them. This guide shows you how to find problems in your extensions.
 
 ## Console
@@ -33,7 +35,7 @@ For more complex debugging you can install the [VSCode extension](https://market
 
 All unhandled exceptions and Promise rejections are shown with an error overlay in Raycast.
 
-![Unhandled exception in development mode](/files/VTF8DErXvSU7GecT7zD4)
+![Unhandled exception in development mode](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b5a9bcaeefa6d23c38427b21408ffd98953722ef%2Fbasics-unhandled-exception.webp?alt=media)
 
 During development, we show the stack trace and add an action to jump to the error to make it easy to fix it. In production, only the error message is shown. You should [show a toast](/api-reference/feedback/toast.md#showtoast) for all expected errors, e.g. a failing network request.
 
@@ -41,13 +43,13 @@ During development, we show the stack trace and add an action to jump to the err
 
 When unhandled exceptions and Promise rejections occur in the production build of a public extension, Raycast tries to redact all potentially sensitive information they may include, and reports them to our error backend. As an extension author, or as the manager of an organisation, you can view and manage error reports for your public extensions by going to <https://www.raycast.com/extension-issues>, or by finding your extension in Raycast's root, `Store` command, or `Manage Extensions` command, and using the `View Issues` action. The dashboard should give you an overview of what issues occurred, how many times, how many users were affected, and more. Each issue additionally has a detail view, including a stack trace, breadcrumbs (typically the actions performed before the crash), extension release date, Raycast version, macOS version.
 
-![Extension Issues](/files/XAvpR83ansTwHf6REDIf)
+![Extension Issues](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e3c7a6de170fa071b3e0caf1ac8f93d283255a91%2Fextension-issues.webp?alt=media)
 
 ## React Developer Tools
 
 We support [React Developer Tools](https://github.com/facebook/react/tree/main/packages/react-devtools) out-of-the-box. Use the tools to inspect and change the props of your React components, and see the results immediately in Raycast. This is especially useful for complex commands with a lot of states.
 
-![React Developer Tools](/files/SBBXJM1Po2D78qbl42yT)
+![React Developer Tools](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-1f048664863696612821b23b146e8b134818b54d%2Fbasics-react-developer-tools.webp?alt=media)
 
 To get started, add the `react-devtools` to your extension. Open a terminal, navigate to your extension directory and run the following command:
 

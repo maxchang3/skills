@@ -2,7 +2,7 @@
 
 When the user takes an important action (for example when irreversibly deleting something), you can ask for confirmation by using `confirmAlert`.
 
-![](/files/vQLVEcQrOYPBncc5nzMq)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-18a8eeb2446fdc8e95157b412aa2c84fd22ffbfa%2Falert.webp?alt=media)
 
 ## API Reference
 
@@ -102,10 +102,10 @@ Use [Alert.ActionStyle.Destructive](#alert.actionstyle) for confirmations of a d
 
 #### Enumeration members
 
-| Name        | Value                            |
-| ----------- | -------------------------------- |
-| Default     | ![](/files/ShpFTsD8Vwn5btGFXcuX) |
-| Destructive | ![](/files/nuVI4TyncukC2w1dIkPi) |
-| Cancel      | ![](/files/9Ykp3RQrgxMBAQof70Hq) |
+| Name        | Value                                                                                                                                                                                                                    |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Default     | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-cf694515bf72da488eea228c3511ea5667cacfe2%2Falert-action-default.webp?alt=media)     |
+| Destructive | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-3529cca2309b77669ede9d8cc0bdff210a9b6f00%2Falert-action-destructive.webp?alt=media) |
+| Cancel      | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e73a37408b953e1a0d6f9751d5e8f001c0f2556f%2Falert-action-cancel.webp?alt=media)      |
 
 

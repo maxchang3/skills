@@ -1,5 +1,7 @@
 # File Structure
 
+Understand the file structure of an extension.
+
 An extension consists of at least an entry point file (e.g. `src/index.ts`) and a `package.json` manifest file. We add a few more support files when scaffolding an extension to streamline development with modern JavaScript tooling.
 
 The typical directory structure of a newly created extension looks like this:

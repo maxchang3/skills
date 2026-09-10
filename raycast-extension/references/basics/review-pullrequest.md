@@ -1,5 +1,7 @@
 # Review an Extension in a Pull Request
 
+Learn how to review a contribution from a Pull Request opened by a contributor.
+
 All updates to an extension are made through a [Pull Request](https://github.com/raycast/extensions/pulls) - if you need to review whether the Pull Request works as expected, then you can checkout the fork within a few seconds.
 
 ## Steps
@@ -14,7 +16,7 @@ All updates to an extension are made through a [Pull Request](https://github.com
 
 Open the PR and click on the incoming ref as shown below
 
-![](/files/KQNYeVcHZymemWBbrznc)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-1a66bb065c6f9ccb78f4a42eebdcd3c70837fb1d%2Fgo-to-ref.webp?alt=media)
 
 Now click the code button and copy the HTTPS path from the dropdown
 

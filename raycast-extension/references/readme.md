@@ -1,8 +1,10 @@
 # Introduction
 
+Start building your perfect tools with the Raycast API.
+
 Welcome, developers! Our docs cover guides, examples, references, and more to help you build extensions and share them with [our community](https://raycast.com/community) and [your team](/teams/getting-started.md).
 
-![](/files/ZsS9KGMtcehM70c2tUwC)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8a4f81b2b9ccaf142983dad7a0c7a2ce953467d5%2Fintroduction-hello-world.webp?alt=media)
 
 The Raycast Platform consists of two parts:
 

@@ -1,5 +1,7 @@
 # List
 
+The de-facto user interface in Raycast. Ideal to present similar data such as to-dos or files.
+
 Our `List` component provides great user experience out of the box:
 
 * Use built-in filtering for best performance.
@@ -7,7 +9,7 @@ Our `List` component provides great user experience out of the box:
 * Show loading indicator for longer operations.
 * Use the search query for typeahead experiences, optionally throttled.
 
-![](/files/41OfRpa5JkNXR8pAsfam)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d9ff7a3c3f01cd1e09f7931c91be432700f545d9%2Flist.webp?alt=media)
 
 ## Search Bar
 
@@ -618,7 +620,7 @@ Raycast provides a default `EmptyView` that will be displayed if the List compon
 
 Note that the `EmptyView` is *never* displayed if the `List`'s `isLoading` property is true and the search bar is empty.
 
-![List EmptyView illustration](/files/mdXUYcNAfddmYJFvUIwb)
+![List EmptyView illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b6810472c5725620a5d412613fdd084fd3b77902%2Flist-empty-view.webp?alt=media)
 
 #### Example
 
@@ -694,7 +696,7 @@ A Detail view that will be shown in the right-hand-side of the `List`.
 
 When shown, it is recommended not to show any accessories on the `List.Item` and instead bring those additional information in the `List.Item.Detail` view.
 
-![List-detail illustration](/files/7MguwNP1jC9ukMUfAvWS)
+![List-detail illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d310e56b42ce2e77b85ecc5909b8bcbe12fa112f%2Flist-detail.webp?alt=media)
 
 #### Example
 
@@ -734,7 +736,7 @@ Use it to display additional structured data about the content of the `List.Item
 
 {% tabs %}
 {% tab title="Metadata + Markdown" %}
-![List Detail-metadata illustration](/files/FcKO8zbXD4sW4MYKUTPi)
+![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4c02baa9f1d9292a03aa094018b662872ce6e942%2Flist-detail-metadata-split.webp?alt=media)
 
 ```typescript
 import { List } from "@raycast/api";
@@ -781,7 +783,7 @@ There is a plant seed on its back right from the day this Pokémon is born. The 
 {% endtab %}
 
 {% tab title="Metadata Standalone" %}
-![List Detail-metadata illustration](/files/X4WxIOwT1I8sRWSIGD6t)
+![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-81529bdb81a2efffcd13a86e8ea913f5cb78a18f%2Flist-detail-metadata-standalone.webp?alt=media)
 
 ```typescript
 import { List } from "@raycast/api";
@@ -833,7 +835,7 @@ export default function Metadata() {
 
 A title with, optionally, an icon and/or text to its right.
 
-![List Detail-metadata-label illustration](/files/ZP44rqZBvwN0hxLymJNj)
+![List Detail-metadata-label illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d918c5dc5d2c7eaee3011fd542f21afe88b629ce%2Flist-detail-metadata-label.webp?alt=media)
 
 #### Example
 
@@ -872,7 +874,7 @@ export default function Metadata() {
 
 An item to display a link.
 
-![List Detail-metadata-link illustration](/files/STwSICqFjBbJmQeWKHRf)
+![List Detail-metadata-link illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-04a9b7dc4177f80744d123856c2b5aaae9c1f694%2Flist-detail-metadata-link.webp?alt=media)
 
 #### Example
 
@@ -915,7 +917,7 @@ export default function Metadata() {
 
 A list of [`Tags`](#list.item.detail.metadata.taglist.item) displayed in a row.
 
-![List Detail-metadata-tag-list illustration](/files/bb9ZVg8jl2HYlqKRPzlq)
+![List Detail-metadata-tag-list illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-2dee98df60c54a79f38571f7109a787da32dc0e1%2Flist-detail-metadata-tag-list.webp?alt=media)
 
 #### Example
 
@@ -968,7 +970,7 @@ A Tag in a `List.Item.Detail.Metadata.TagList`.
 
 A metadata item that shows a separator line. Use it for grouping and visually separating metadata items.
 
-![List Detail-metadata-separator illustration](/files/kv6fZqxMSuHkvZ0ukvmb)
+![List Detail-metadata-separator illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e67bdba1103ac032a5090d87e484e2b35f547f1c%2Flist-detail-metadata-separator.webp?alt=media)
 
 #### Example
 
@@ -1036,7 +1038,7 @@ export default function Command() {
 
 An interface describing an accessory view in a `List.Item`.
 
-![List.Item accessories illustration](/files/ZtIFUjcD0aw4Ahlo0ERB)
+![List.Item accessories illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-f9c66d7d4f09101ce3ab239c5dbd509f3304b776%2Flist-item-accessories.webp?alt=media)
 
 #### Properties
 

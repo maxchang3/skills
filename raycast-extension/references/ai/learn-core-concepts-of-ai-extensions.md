@@ -1,5 +1,7 @@
 # Learn Core Concepts of AI Extensions
 
+Get to know the core concepts of AI extensions.
+
 AI Extensions rely on three core concepts: Tools, Instructions, and Evals. Each of these concepts plays a crucial role in the development of AI Extensions. Let's take a closer look at each of them.
 
 ## Tools

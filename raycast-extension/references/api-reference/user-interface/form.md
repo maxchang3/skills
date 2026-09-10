@@ -2,7 +2,7 @@
 
 Our `Form` component provides great user experience to collect some data from a user and submit it for extensions needs.
 
-![](/files/bqURwpu5VThrgZ2yaTZt)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b36017e7ee6ad8162b27712895ac0ac036103b4d%2Fexample-doppler-share-secrets.webp?alt=media)
 
 ## Two Types of Items: Controlled vs. Uncontrolled
 
@@ -20,7 +20,7 @@ Before submitting data, it is important to ensure all required form controls are
 
 In Raycast, validation can be fully controlled from the API. To keep the same behavior as we have natively, the proper way of usage is to validate a `value` in the `onBlur` callback, update the `error` of the item and keep track of updates with the `onChange` callback to drop the `error` value. The [useForm](/utilities/react-hooks/useform.md) utils hook nicely wraps this behavior and is the recommended way to do deal with validations.
 
-![](/files/iqyp1fz6BGtnV8eqqHch)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-06326f9b2b6de5d39b9c8aa37e677b23c122f26e%2Fform-validation.webp?alt=media)
 
 {% hint style="info" %}
 Keep in mind that if the Form has any errors, the [`Action.SubmitForm`](https://developers.raycast.com/api-reference/user-interface/pages/-MiwANRaRK1jG1WJw3dy#action.submitform) `onSubmit` callback won't be triggered.
@@ -151,7 +151,7 @@ function validatePassword(value: string): boolean {
 
 Drafts are a mechanism to preserve filled-in inputs (but not yet submitted) when an end-user exits the command. To enable this mechanism, set the `enableDrafts` prop on your Form and populate the initial values of the Form with the [top-level prop `draftValues`](/information/lifecycle.md#launchprops).
 
-![](/files/ERQnSnwzUrIVIZs1YNDb)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a71310d2af9ec5e3b3e443bbf6f11ffc067adf52%2Fform-drafts.webp?alt=media)
 
 {% hint style="info" %}
 
@@ -269,7 +269,7 @@ Optionally add a [Form.LinkAccessory](#form.linkaccessory) in the right-hand sid
 
 A form item with a text field for input.
 
-![](/files/GkGzr0yxJIZWAR2Y39A5)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e0d079518d5780a4b1c84d08642a4349bbc5e68d%2Fform-textfield.webp?alt=media)
 
 #### Example
 
@@ -350,7 +350,7 @@ export default function Command() {
 
 A form item with a secure text field for password-entry in which the entered characters must be kept secret.
 
-![](/files/sK3ixZGeSb2jyzWZYw3H)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-70aadaea0c392c1dc97d0797f2f1d7b8e4d439ed%2Fform-password.webp?alt=media)
 
 #### Example
 
@@ -431,7 +431,7 @@ export default function Command() {
 
 A form item with a text area for input. The item supports multiline text entry.
 
-![](/files/6fyyD9RB4VNsUu2CxHpk)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b86a65278162fe68c8661034a239d039a2e447cc%2Fform-textarea.webp?alt=media)
 
 #### Example
 
@@ -516,7 +516,7 @@ export default function Command() {
 
 A form item with a checkbox.
 
-![](/files/PoGtnUzcArHkEvyTLiNA)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ef18048374669510de660607b9c0e368c07a00c1%2Fform-checkbox.webp?alt=media)
 
 #### Example
 
@@ -597,7 +597,7 @@ export default function Command() {
 
 A form item with a date picker.
 
-![](/files/xZR7TOj5mNh8yswi26XS)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e2b50c8a42be98887a58a493470d5007543befda%2Fform-datepicker.webp?alt=media)
 
 #### Example
 
@@ -712,7 +712,7 @@ export default function Command() {
 
 A form item with a dropdown menu.
 
-![](/files/0CoK4316hPYAQbUYKBLi)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a41244152d1b3069ff42e915e6d00b6259e3a2f1%2Fform-dropdown.webp?alt=media)
 
 #### Example
 
@@ -891,7 +891,7 @@ export default function Command() {
 
 A form item with a tag picker that allows the user to select multiple items.
 
-![](/files/aESwCxMajZfzEaG1zmTF)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-0df8b3735a1881832202a9a88b4614abddf986a4%2Fform-tagpicker.webp?alt=media)
 
 #### Example
 
@@ -1021,7 +1021,7 @@ export default function Command() {
 
 A form item that shows a separator line. Use for grouping and visually separating form items.
 
-![](/files/SRy3FCB8Zk5H2ThrFSxA)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8268f478b1023d780fa7f357b062a39eb8b09546%2Fform-separator.webp?alt=media)
 
 #### Example
 
@@ -1053,9 +1053,9 @@ A form item with a button to open a dialog to pick some files and/or some direct
 While the user picked some items that existed, it might be possible for them to be deleted or changed when the `onSubmit` callback is called. Hence you should always make sure that the items exist before acting on them!
 {% endhint %}
 
-![](/files/0VDHHNNa26eL9MMt7onO)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a84e496e0d48f2d448078314a7a42af3db29abcf%2Fform-filepicker-multiple.webp?alt=media)
 
-![Single Selection](/files/qRxk4tc8kk39JuJZ0yrz)
+![Single Selection](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-53289fc13e994aeee7d356baf18b053340e8e927%2Fform-filepicker-single.webp?alt=media)
 
 #### Example
 
@@ -1212,7 +1212,7 @@ A form item with a simple text label.
 
 Do *not* use this component to show validation messages for other form fields.
 
-![](/files/GHtfm9QohLMRYkmIxRQL)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8dba909f1969413f109d4536b5f61bd638213019%2Fform-description.webp?alt=media)
 
 #### Example
 

@@ -1,10 +1,10 @@
 # Manage Extensions Command
 
-A Raycast command to manage your extensions, add new commands or attachments, etc.
+A Raycast command to manage your extensions, add new commands or tools, etc.
 
 Raycast provides a built-in command to manage your extensions.
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-98a70fc3a77ad10cc32267b282a16b49a38abc00%2Fmanage-extensions.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-17c96c5dbf88422f46f912b83b5997b2f30c50cd%2Fmanage-extensions.webp?alt=media)
 
 For each extensions, there are a few actions to manage them.
 

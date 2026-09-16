@@ -35,7 +35,7 @@ For more complex debugging you can install the [VSCode extension](https://market
 
 All unhandled exceptions and Promise rejections are shown with an error overlay in Raycast.
 
-![Unhandled exception in development mode](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b5a9bcaeefa6d23c38427b21408ffd98953722ef%2Fbasics-unhandled-exception.webp?alt=media)
+![Unhandled exception in development mode](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-9b98d2c57eb86dba9af44bfbe96b388da9100ecf%2Fbasics-unhandled-exception.webp?alt=media)
 
 During development, we show the stack trace and add an action to jump to the error to make it easy to fix it. In production, only the error message is shown. You should [show a toast](/api-reference/feedback/toast.md#showtoast) for all expected errors, e.g. a failing network request.
 

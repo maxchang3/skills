@@ -1,6 +1,6 @@
 # Raycast Developer Documentation Index
 
-> **Last Synced:** 2026-09-10
+> **Last Synced:** 2026-09-16
 
 # Raycast API
 
@@ -36,7 +36,7 @@
 - [Deeplinks](./information/lifecycle/deeplinks.md)
 - [Best Practices](./information/best-practices.md): Tips to guarantee a good user experience for your extensions.
 - [Developer Tools](./information/developer-tools.md)
-- [Manage Extensions Command](./information/developer-tools/manage-extensions-command.md): A Raycast command to manage your extensions, add new commands or attachments, etc.
+- [Manage Extensions Command](./information/developer-tools/manage-extensions-command.md): A Raycast command to manage your extensions, add new commands or tools, etc.
 - [CLI](./information/developer-tools/cli.md): The Raycast CLI allows you to build, develop, and lint your extension.
 - [ESLint](./information/developer-tools/eslint.md)
 - [Forked Extensions (community tool)](./information/developer-tools/forked-extensions.md)

@@ -196,8 +196,7 @@ const { isLoading, data, pagination } = usePromise(
 );
 ```
 
-You'll notice that, in the second case, the hook returns an additional item: `pagination`. This can be passed to Raycast's `List` or `Grid` components in order to enable pagination.\
-Another thing to notice is that the async function receives a [PaginationOptions](#paginationoptions) argument, and returns a specific data format:
+You'll notice that, in the second case, the hook returns an additional item: `pagination`. This can be passed to Raycast's `List` or `Grid` components in order to enable pagination. Another thing to notice is that the async function receives a [PaginationOptions](#paginationoptions) argument, and returns a specific data format:
 
 ```ts
 {
@@ -207,9 +206,7 @@ Another thing to notice is that the async function receives a [PaginationOptions
 }
 ```
 
-Every time the promise resolves, the hook needs to figure out if it should paginate further, or if it should stop, and it uses `hasMore` for this.\
-In addition to this, the hook also needs `data`, and needs it to be an array, because internally it appends it to a list, thus making sure the `data` that the hook *returns* always contains the data for all of the pages that have been loaded so far.\
-Additionally, you can also pass a `cursor` property, which will be included along with `page` and `lastItem` in the next pagination call.
+Every time the promise resolves, the hook needs to figure out if it should paginate further, or if it should stop, and it uses `hasMore` for this. In addition to this, the hook also needs `data`, and needs it to be an array, because internally it appends it to a list, thus making sure the `data` that the hook *returns* always contains the data for all of the pages that have been loaded so far. Additionally, you can also pass a `cursor` property, which will be included along with `page` and `lastItem` in the next pagination call.
 
 ### Full Example
 

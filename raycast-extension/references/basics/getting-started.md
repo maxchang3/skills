@@ -13,7 +13,7 @@ Before you can create your first extension, make sure you have the following pre
 
 ## Sign In
 
-![Opening the "Store" command in Raycast](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-829557d913eae5961c97c1493babd3e6371a30f1%2Fwelcome.webp?alt=media)
+![Opening the "Store" command in Raycast](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4c571f864c8107487fd3853f9fdcbcc39aefea6a%2Fwelcome.webp?alt=media)
 
 You need to be signed in to use the following extension development commands.
 

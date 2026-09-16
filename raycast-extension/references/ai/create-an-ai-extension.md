@@ -28,11 +28,11 @@ Just like with regular extensions, you need to build your AI Extension. After yo
 
 Open Raycast, and you'll notice a new list item saying "Ask ..." at the top of the root search. Press `↵` to open it. From there on, you can chat to your AI Extension.
 
-![AI Extension](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-23cf3dba982add079b5ee80f7cad37b49dee0e13%2Fuse-ai-extension.webp?alt=media)
+![AI Extension](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-363c9e267e98ca7564e7b7a84f28e3a8863f0123%2Fuse-ai-extension.webp?alt=media)
 
 Alternatively, you can open Raycast's AI Chat and start chatting to your AI Extension there. Simply type `@` and start typing the name of your extension.
 
-![AI Chat](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-c8184957f84dd38b6ec5234940c1266a9d7519f9%2Fai-chat.webp?alt=media)
+![AI Chat](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-7b52aef66f69747c06b2420c3a67515e3e090a3e%2Fai-chat.webp?alt=media)
 
 🎉 Congratulations! You built your first AI extension. Now you can start adding more tools to your extension to make it more powerful.
 

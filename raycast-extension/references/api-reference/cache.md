@@ -6,8 +6,7 @@ Caching abstraction that stores data on disk and supports LRU (least recently us
 
 ### Cache
 
-The `Cache` class provides CRUD-style methods (get, set, remove) to update and retrieve data synchronously based on a key. The data must be a string and it is up to the client to decide which serialization format to use.\
-A typical use case would be to use `JSON.stringify` and `JSON.parse`.
+The `Cache` class provides CRUD-style methods (get, set, remove) to update and retrieve data synchronously based on a key. The data must be a string and it is up to the client to decide which serialization format to use. A typical use case would be to use `JSON.stringify` and `JSON.parse`.
 
 By default, the cache is shared between the commands of an extension. Use [Cache.Options](#cache.options) to configure a `namespace` per command if needed (for example, set it to [`environment.commandName`](/api-reference/environment.md)).
 
@@ -59,8 +58,7 @@ export default function Command() {
 
 ### Cache#get
 
-Returns the data for the given key. If there is no data for the key, `undefined` is returned.\
-If you want to just check for the existence of a key, use [has](#cache-has).
+Returns the data for the given key. If there is no data for the key, `undefined` is returned. If you want to just check for the existence of a key, use [has](#cache-has).
 
 #### Signature
 
@@ -76,8 +74,7 @@ get(key: string): string | undefined
 
 ### Cache#has
 
-Returns `true` if data for the key exists, `false` otherwise.\
-You can use this method to check for entries without affecting the LRU access.
+Returns `true` if data for the key exists, `false` otherwise. You can use this method to check for entries without affecting the LRU access.
 
 #### Signature
 
@@ -93,9 +90,7 @@ has(key: string): boolean
 
 ### Cache#set
 
-Sets the data for the given key.\
-If the data exceeds the configured `capacity`, the least recently used entries are removed.\
-This also notifies registered subscribers (see [subscribe](#cache-subscribe)).
+Sets the data for the given key. If the data exceeds the configured `capacity`, the least recently used entries are removed. This also notifies registered subscribers (see [subscribe](#cache-subscribe)).
 
 #### Signature
 
@@ -112,9 +107,7 @@ set(key: string, data: string)
 
 ### Cache#remove
 
-Removes the data for the given key.\
-This also notifies registered subscribers (see [subscribe](#cache-subscribe)).\
-Returns `true` if data for the key was removed, `false` otherwise.
+Removes the data for the given key. This also notifies registered subscribers (see [subscribe](#cache-subscribe)). Returns `true` if data for the key was removed, `false` otherwise.
 
 #### Signature
 
@@ -124,8 +117,7 @@ remove(key: string): boolean
 
 ### Cache#clear
 
-Clears all stored data.\
-This also notifies registered subscribers (see [subscribe](#cache-subscribe)) unless the `notifySubscribers` option is set to `false`.
+Clears all stored data. This also notifies registered subscribers (see [subscribe](#cache-subscribe)) unless the `notifySubscribers` option is set to `false`.
 
 #### Signature
 
@@ -141,8 +133,7 @@ clear((options = { notifySubscribers: true }));
 
 ### Cache#subscribe
 
-Registers a new subscriber that gets notified when cache data is set or removed.\
-Returns a function that can be called to remove the subscriber.
+Registers a new subscriber that gets notified when cache data is set or removed. Returns a function that can be called to remove the subscriber.
 
 #### Signature
 

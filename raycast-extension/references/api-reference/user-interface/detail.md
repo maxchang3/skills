@@ -1,6 +1,6 @@
 # Detail
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-c2161bc51a61a09b4a7aea8a1ed6ab3f65ddd566%2Fdetail.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-363eada40205c97ab5b9278a5157fd517ec3e692%2Fdetail.webp?alt=media)
 
 ## API Reference
 
@@ -67,7 +67,7 @@ A Metadata view that will be shown in the right-hand-side of the `Detail`.
 
 Use it to display additional structured data about the main content shown in the `Detail` view.
 
-![Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-2ff9dfb88c0b6358b14ffac00c3cff10697634d0%2Fdetail-metadata.webp?alt=media)
+![Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4902627cb6aecc574071685c050b47885e30bde1%2Fdetail-metadata.webp?alt=media)
 
 #### Example
 
@@ -114,7 +114,7 @@ export default function Main() {
 
 A single value with an optional icon.
 
-![Detail-metadata-label illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-6fe03ce7bad659317f81b002747ced317b60f20d%2Fdetail-metadata-label.webp?alt=media)
+![Detail-metadata-label illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-9a6622c88fc9c97341696d87debaff3501da3c9f%2Fdetail-metadata-label.webp?alt=media)
 
 #### Example
 
@@ -157,7 +157,7 @@ export default function Main() {
 
 An item to display a link.
 
-![Detail-metadata-link illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-08ab8450b22fd002ea39ef5ff9a30f4f25f35861%2Fdetail-metadata-link.webp?alt=media)
+![Detail-metadata-link illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-89ccc440484ed473ba8d496b99b8e81229213078%2Fdetail-metadata-link.webp?alt=media)
 
 #### Example
 
@@ -200,7 +200,7 @@ export default function Main() {
 
 A list of [`Tags`](#detail.metadata.taglist.item) displayed in a row.
 
-![Detail-metadata-taglist illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-6a0a834fb8f2b9b715b7c38797c3abb3c2f0a4c5%2Fdetail-metadata-taglist.webp?alt=media)
+![Detail-metadata-taglist illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e5360efdbfd5660ff4c974603dc9e27f018fb996%2Fdetail-metadata-taglist.webp?alt=media)
 
 #### Example
 

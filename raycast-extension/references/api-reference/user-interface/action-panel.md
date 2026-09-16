@@ -1,6 +1,6 @@
 # Action Panel
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-25a03b5271959426230e724a733f30e7597dd1bf%2Faction-panel.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a1bf254ceb4ad9679111270a8a123946d5538877%2Faction-panel.webp?alt=media)
 
 ## API Reference
 
@@ -8,12 +8,9 @@
 
 Exposes a list of [actions](/api-reference/user-interface/actions.md) that can be performed by the user.
 
-Often items are context-aware, e.g., based on the selected list item. Actions can be grouped into semantic\
-sections and can have keyboard shortcuts assigned.
+Often items are context-aware, e.g., based on the selected list item. Actions can be grouped into semantic sections and can have keyboard shortcuts assigned.
 
-The first and second action become the primary and secondary action. They automatically get the default keyboard shortcuts assigned.\
-In [List](/api-reference/user-interface/list.md), [Grid](/api-reference/user-interface/grid.md), and [Detail](/api-reference/user-interface/detail.md), this is `↵` for the primary and `⌘` `↵` for the secondary action. In [Form](/api-reference/user-interface/form.md) it's `⌘` `↵` for the primary and `⌘` `⇧` `↵` for the secondary.\
-Keep in mind that while you can specify an alternative shortcut for the primary and secondary actions, it won't be displayed in the Action Panel.
+The first and second action become the primary and secondary action. They automatically get the default keyboard shortcuts assigned. In [List](/api-reference/user-interface/list.md), [Grid](/api-reference/user-interface/grid.md), and [Detail](/api-reference/user-interface/detail.md), this is `↵` for the primary and `⌘` `↵` for the secondary action. In [Form](/api-reference/user-interface/form.md) it's `⌘` `↵` for the primary and `⌘` `⇧` `↵` for the secondary. Keep in mind that while you can specify an alternative shortcut for the primary and secondary actions, it won't be displayed in the Action Panel.
 
 #### Example
 
@@ -52,8 +49,7 @@ export default function Command() {
 
 A group of visually separated items.
 
-Use sections when the [ActionPanel](#actionpanel) contains a lot of actions to help guide the user to related actions.\
-For example, create a section for all copy actions.
+Use sections when the [ActionPanel](#actionpanel) contains a lot of actions to help guide the user to related actions. For example, create a section for all copy actions.
 
 #### Example
 

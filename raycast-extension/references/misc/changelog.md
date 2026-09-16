@@ -1,5 +1,129 @@
 # Changelog
 
+## 2.3.0
+
+### 💎 Improvements
+
+* **Rendering**: Reduced memory usage and the amount of data sent when updating extension views, and improved compression of large updates.
+
+### 🐞 Fixes
+
+* **AI**: `AI.ask` now respects a numeric `creativity` value.
+
+## 2.0.0
+
+Raycast 2.0 brings the extension API to the new Raycast desktop app on macOS and Windows. The CLI requires Node.js 22.22.2 or later.
+
+### ✨ New
+
+* **Environment**: Extensions can now identify the entry point they're running with `environment.entryPointType` (`"command"` or `"tool"`), `environment.entryPointName`, and `environment.entryPointMode`. This is useful for sharing code between commands and AI tools. `environment.commandName` and `environment.commandMode` remain available as deprecated aliases for `entryPointName` and `entryPointMode`.
+* **OAuth**: Added `OAuth.RedirectMethod.ClientIdMetadataDocument` for providers that support OAuth Client ID Metadata Documents. Create an `OAuth.PKCEClient` with this redirect method to use Raycast's hosted metadata document as the default client ID; you can omit `clientId` when calling `authorizationRequest`. The document URL is also available as `OAuth.clientIdMetadataDocument`. Token scopes now accept an array of strings as well as a space-separated string.
+
+#### Help users get started with `help.md`
+
+Explain how to configure your extension right where users need it. Add a `help.md` file next to `package.json`, and Raycast will display its Markdown beside the setup form when a command or tool is missing required preferences. Use it to walk users through obtaining an API key, finding an account ID, or enabling a setting in another application.
+
+For example:
+
+```markdown
+# Connect your account
+
+1. Open your account settings and create an API key with read access.
+2. Copy the key into the API Key field.
+3. Save your preferences to start searching.
+```
+
+See [Help for Required Preferences](/api-reference/preferences.md#help-for-required-preferences) for more details.
+
+#### Track down out-of-memory errors
+
+When an extension exceeds its JavaScript heap limit, Raycast now reports a **Command Out of Memory** error with the limit that was reached. For view commands, the new **Reload with Memory Reporting** action lets you rerun the command and collect diagnostic information while reproducing the problem.
+
+Use [`captureMemorySnapshot(label)`](/api-reference/utilities.md#capturememorysnapshot) to record heap usage before and after operations you want to investigate:
+
+```typescript
+import { captureMemorySnapshot } from "@raycast/api";
+
+captureMemorySnapshot("Before loading records");
+// Fetch, parse, or transform your data here.
+captureMemorySnapshot("After loading records");
+```
+
+With memory reporting enabled, Raycast records these labeled measurements alongside automatic measurements around initialization and callbacks. Development commands also collect periodic samples. The error view's **Memory Diagnostics** section shows the latest and peak heap usage, plus recent measurements, to help you narrow down where memory grew. Calls to `captureMemorySnapshot` do nothing when memory reporting is disabled, so you can leave useful checkpoints in your code.
+
+### 💎 Improvements
+
+* **Keyboard**: `Keyboard.Shortcut.Common` now provides macOS and Windows bindings. Some common shortcuts have also changed on macOS to match Raycast 2.0: `CopyName` uses `⌘⌥C`, `CopyPath` uses `⌘⌃C`, `Pin` uses `⌘.`, and `MoveUp` / `MoveDown` use `⌘⌥↑` / `⌘⌥↓`. Use the common shortcuts to follow the platform's bindings automatically.
+
+## 1.104.24 - 2026-07-31
+
+### 🐞 Fixes
+
+* **CLI**: Fixed the organization upgrade link shown when publishing an extension exceeds the free plan's command limit.
+
+## 1.104.13 - 2026-04-22
+
+### 💎 Improvements
+
+* **Runtime**: Updated the extension runtime to Node.js 22.22.2. The CLI now requires Node.js 22.22.2 or later.
+
+## 1.104.10 - 2026-03-16
+
+### 🐞 Fixes
+
+* **CLI**: Fixed publishing private extensions from repositories without commits or a remote origin.
+
+## 1.104.9 - 2026-03-10
+
+### 🐞 Fixes
+
+* **Rust**: Generated TypeScript definitions now respect `#[serde(rename = "...")]` field names and allow `undefined` for `Option<T>` values.
+
+## 1.104.6 - 2026-02-11
+
+### 💎 Improvements
+
+* **Swift and Rust**: Generate TypeScript declarations and loader stubs even when native compilation is skipped on the current platform, allowing extensions with platform-specific code to build on the other platform.
+
+## 1.104.4 - 2026-02-02
+
+### 🐞 Fixes
+
+* **Markdown**: Improved parsing of LaTeX equations inside tables.
+
+## 1.104.2 - 2026-01-21
+
+### ✨ New
+
+* **Keyboard**: Added `Keyboard.Shortcut.Common.Save`.
+
+### 🐞 Fixes
+
+* **Toast**: Fixed platform-specific shortcuts on toast actions.
+
+## 1.103.6 - 2025-11-05
+
+### 💎 Improvements
+
+* **Keyboard**: Platform-specific shortcuts now use the `Windows` key, matching the manifest's platform naming. The lowercase `windows` key is deprecated.
+
+## 1.103.5 - 2025-10-28
+
+### 🐞 Fixes
+
+* **CLI**: Fixed the "refusing to merge unrelated histories" error when publishing or pulling contributions.
+
+## 1.103.3 - 2025-10-07
+
+### 💎 Improvements
+
+* **CLI**: Extension publishing and contribution workflows now work on Windows.
+
+### 🐞 Fixes
+
+* **CLI**: Prefer `README.md` when multiple README files exist and ignore directories when reading README and changelog files.
+* **CLI**: Skip checks for missing ESLint or Prettier installations when running without `--fix`.
+
 ## 1.103.0 - 2025-09-15
 
 Over the past few releases, we've made some additions to the API to better support it:
@@ -24,6 +148,35 @@ Over the past few releases, we've made some additions to the API to better suppo
 ```
 
 * We've also updated the `@raycast/utils` to make it cross platform and added a `runPowerShellScript` function.
+
+### Rust in Windows extensions
+
+You can now call Rust functions from your extension to access native Windows APIs or handle work better suited to Rust. The CLI compiles your Cargo package into a Windows executable, bundles it with the extension, and generates TypeScript declarations and async wrappers for the functions you expose.
+
+Create a binary Cargo package in a `rust` folder next to `src`, following the [Rust tools setup guide](https://github.com/raycast/extensions-rust-tools#using-the-package) to add the runtime and macro dependencies. Install the Windows target with `rustup target add x86_64-pc-windows-msvc`, then mark functions in `rust/src/main.rs` with `#[raycast]`:
+
+```rust
+use raycast_rust_macros::raycast;
+
+#[raycast]
+fn double(value: i32) -> i32 {
+    value * 2
+}
+```
+
+Import them from a command using the `rust:` prefix and a relative path to the folder containing `Cargo.toml`:
+
+```typescript
+import { showToast } from "@raycast/api";
+import { double } from "rust:../rust";
+
+export default async function Command() {
+  const result = await double(21);
+  await showToast({ title: `The result is ${result}` });
+}
+```
+
+Run `npm run dev` on Windows to build and try the command. Rust functions run on Windows; for a cross-platform extension, keep the macOS implementation separate and select it with `process.platform`.
 
 ## 1.98.0 - 2025-05-08
 
@@ -703,7 +856,7 @@ The new Extension Issues Dashboard is designed to help you quickly troubleshoot 
 
 * **Grid**: the `Grid` component accepts three new props that should give extension authors more flexibility: `columns`, `fit` and `aspectRatio`.
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-274bdfb26a191e298c4248a6d7031d08d725f484%2Fgrid-styled-sections.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-f1ef10c3e5a26ea021479c8fd7f318d573dd8733%2Fgrid-styled-sections.webp?alt=media)
 
 * **Grid Sections** don't all have to look the same anymore! The grid `Section` component now *also* accepts the `columns`, `fit` and `aspectRatio` props. When specified, they will override the value of the parent `Grid` component's prop.
 * **List**: The list supports a new property for configuring how sections are ordered. Setting `filtering={{ keepSectionOrder: true }}` ensures that the section order is not changed based on items' ranking values; this can be useful for use cases where a small number of fix sections should always appear in the same order when the user filters the list. We are deprecating the `enableFiltering` property.
@@ -869,7 +1022,7 @@ The new Extension Issues Dashboard is designed to help you quickly troubleshoot 
 
 The `<Grid />` component's made its way to our API. It's perfect to layout media-heavy information, such as icons, images or colors. The component allows you to layout differently sized items. We designed [its API](https://developers.raycast.com/api-reference/user-interface/list) close to the `<List />` component for smooth adoption.
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4bb3d7e88613cf9ccba01c798f5d2aa62edfaeac%2Fgrid.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-801b355c936b8b068cc1322fbf79fb48110469c4%2Fgrid.webp?alt=media)
 
 ### 🐞 Fixes
 

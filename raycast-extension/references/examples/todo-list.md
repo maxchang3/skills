@@ -8,7 +8,7 @@ The source code of the example can be found [here](https://github.com/raycast/ex
 
 What's an example section without a todo list?! Let's put one together in Raycast. This example will show how to render a list, navigate to a form to create a new element and update the list.
 
-![Example: A simple todo list](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-9aaa862f82624bd327d69b52bca9de6f6e12dd13%2Fexample-todo-list.webp?alt=media)
+![Example: A simple todo list](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-009d02a653e2bdaa8a6ef63970d5c44caa0d5346%2Fexample-todo-list.webp?alt=media)
 
 ## Render todo list
 
@@ -81,7 +81,7 @@ function CreateTodoAction(props: { onCreate: (todo: Todo) => void }) {
 
 The `<CreateTodoForm>` shows a single text field for the title. When the form is submitted, it calls the `onCreate` callback and closes itself.
 
-![Create todo form](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d4c1ff50bde2708dfcf9875a92ab4d0a2a41ef53%2Fexample-create-todo.webp?alt=media)
+![Create todo form](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-95cbfbfdc92564ffb5f1d696b883f71e55d0206c%2Fexample-create-todo.webp?alt=media)
 
 To use the action, we add it to the `<List>` component. This makes the action available when the list is empty which is exactly what we want to create our first todo.
 

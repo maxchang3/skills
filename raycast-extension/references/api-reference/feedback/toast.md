@@ -8,7 +8,7 @@ Additionally, Toasts can have some actions associated to the action they are abo
 The `showToast()` will fallback to [showHUD()](/api-reference/feedback/hud.md#showhud) if the Raycast window is closed.
 {% endhint %}
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-607b51d1dc3e47c6cdff37be217a0e4d42368a57%2Ftoast.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-0c0204b21e27f59c173c16b93edfdb0fe4e0eb7e%2Ftoast.webp?alt=media)
 
 ## API Reference
 
@@ -151,9 +151,9 @@ Use [Toast.Style.Success](#toast.style) for confirmations and [Toast.Style.Failu
 
 | Name     | Value                                                                                                                                                                                                          |
 | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Animated | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-7e62989ba2fea14db0967e09bb5bfaf84706e12d%2Ftoast-animated.webp?alt=media) |
-| Success  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-dce0b170c3e47fa4c5525e1a0a74600350006445%2Ftoast-success.webp?alt=media)  |
-| Failure  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-96a3cfd7aaec6933c18481f6228bb647093217ff%2Ftoast-failure.webp?alt=media)  |
+| Animated | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-c10484e18e7ad619e80f23c6046a4633d8ecdfcd%2Ftoast-animated.webp?alt=media) |
+| Success  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b0b7c77e959c0e47d770d1fca00ff2b8f2f0a37d%2Ftoast-success.webp?alt=media)  |
+| Failure  | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-5f139630b26d161376da6087d4e286e136363fcc%2Ftoast-failure.webp?alt=media)  |
 
 ### Toast.ActionOptions
 

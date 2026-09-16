@@ -9,7 +9,7 @@ Our `List` component provides great user experience out of the box:
 * Show loading indicator for longer operations.
 * Use the search query for typeahead experiences, optionally throttled.
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d9ff7a3c3f01cd1e09f7931c91be432700f545d9%2Flist.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ef0c2a2a59e68fd1551a56da3739814699492eab%2Flist.webp?alt=media)
 
 ## Search Bar
 
@@ -620,7 +620,7 @@ Raycast provides a default `EmptyView` that will be displayed if the List compon
 
 Note that the `EmptyView` is *never* displayed if the `List`'s `isLoading` property is true and the search bar is empty.
 
-![List EmptyView illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b6810472c5725620a5d412613fdd084fd3b77902%2Flist-empty-view.webp?alt=media)
+![List EmptyView illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-febf4d09eb945becdc4ed42fe7ff20258634929e%2Flist-empty-view.webp?alt=media)
 
 #### Example
 
@@ -696,7 +696,7 @@ A Detail view that will be shown in the right-hand-side of the `List`.
 
 When shown, it is recommended not to show any accessories on the `List.Item` and instead bring those additional information in the `List.Item.Detail` view.
 
-![List-detail illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d310e56b42ce2e77b85ecc5909b8bcbe12fa112f%2Flist-detail.webp?alt=media)
+![List-detail illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-6959361ebb463c023b3661bd2dce88fc89d10a82%2Flist-detail.webp?alt=media)
 
 #### Example
 
@@ -736,7 +736,7 @@ Use it to display additional structured data about the content of the `List.Item
 
 {% tabs %}
 {% tab title="Metadata + Markdown" %}
-![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4c02baa9f1d9292a03aa094018b662872ce6e942%2Flist-detail-metadata-split.webp?alt=media)
+![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e8099f4169a19fa5788d22cf43a23ac91df88949%2Flist-detail-metadata-split.webp?alt=media)
 
 ```typescript
 import { List } from "@raycast/api";
@@ -783,7 +783,7 @@ There is a plant seed on its back right from the day this Pokémon is born. The 
 {% endtab %}
 
 {% tab title="Metadata Standalone" %}
-![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-81529bdb81a2efffcd13a86e8ea913f5cb78a18f%2Flist-detail-metadata-standalone.webp?alt=media)
+![List Detail-metadata illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a1374d03fddb4b19ab9a7c69190a8a0de8d8c434%2Flist-detail-metadata-standalone.webp?alt=media)
 
 ```typescript
 import { List } from "@raycast/api";
@@ -835,7 +835,7 @@ export default function Metadata() {
 
 A title with, optionally, an icon and/or text to its right.
 
-![List Detail-metadata-label illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d918c5dc5d2c7eaee3011fd542f21afe88b629ce%2Flist-detail-metadata-label.webp?alt=media)
+![List Detail-metadata-label illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-477df900d3c9b18eb4fea06f71171f9aa07a1038%2Flist-detail-metadata-label.webp?alt=media)
 
 #### Example
 
@@ -874,7 +874,7 @@ export default function Metadata() {
 
 An item to display a link.
 
-![List Detail-metadata-link illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-04a9b7dc4177f80744d123856c2b5aaae9c1f694%2Flist-detail-metadata-link.webp?alt=media)
+![List Detail-metadata-link illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-08d393839fa8222db20ddd9ba37d9a17cac8492b%2Flist-detail-metadata-link.webp?alt=media)
 
 #### Example
 
@@ -917,7 +917,7 @@ export default function Metadata() {
 
 A list of [`Tags`](#list.item.detail.metadata.taglist.item) displayed in a row.
 
-![List Detail-metadata-tag-list illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-2dee98df60c54a79f38571f7109a787da32dc0e1%2Flist-detail-metadata-tag-list.webp?alt=media)
+![List Detail-metadata-tag-list illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-0ad0c52e76e26a47cba3180951ccf7400dced911%2Flist-detail-metadata-tag-list.webp?alt=media)
 
 #### Example
 
@@ -1038,7 +1038,7 @@ export default function Command() {
 
 An interface describing an accessory view in a `List.Item`.
 
-![List.Item accessories illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-f9c66d7d4f09101ce3ab239c5dbd509f3304b776%2Flist-item-accessories.webp?alt=media)
+![List.Item accessories illustration](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-26aa39fce313c6cafbe55083cf44b479a8be53ee%2Flist-item-accessories.webp?alt=media)
 
 #### Properties
 

@@ -18,7 +18,7 @@ Raycast provides 3 types of templates:
 
 <summary>Renders a simple Hello World from a markdown string.</summary>
 
-![Detail Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e9490e58b081fe70c0c380534a452f981ed4d786%2Fdetail-template.webp?alt=media)
+![Detail Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-9190e0860f24711b630e5e055456a2cd89bfb514%2Fhello-world-2.webp?alt=media)
 
 {% hint style="info" %}
 See the [API Reference](/api-reference/user-interface/detail.md) for more information about customization.
@@ -48,7 +48,7 @@ See the [API Reference](/api-reference/user-interface/form.md) for more informat
 
 Defaults to a large grid, but provides a selection menu to change the size.
 
-![Grid Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-585a703929e53a7f7f995ed2b6bf8e0a48f04faa%2Fgrid-template.webp?alt=media)
+![Grid Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-0e647f3ac99c0dd24ee62bde07dc093f95b2b404%2Fgrid-template.webp?alt=media)
 
 {% hint style="info" %}
 See the [API Reference](/api-reference/user-interface/grid.md) for more information about customization.
@@ -64,7 +64,7 @@ See here for information about [Icons](/api-reference/user-interface/icons-and-i
 
 <summary>Renders a list of options. When an option is selected, a Detail view is displayed.</summary>
 
-![List and Detail Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-2b379c00faa242c756f1a2aaad0a054b1648f8d6%2Flist-detail-template.webp?alt=media)
+![List and Detail Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-75521699b43de1cca6b5853739387b72ae663030%2Flist-detail-template.webp?alt=media)
 
 {% hint style="info" %}
 See the [API Reference](/api-reference/user-interface/list.md) for more information about customization.
@@ -96,7 +96,7 @@ A example of a no-view command which shows a simple [HUD](/api-reference/feedbac
 
 <summary>Renders a static list with each entry containing an icon, title, subtitle, and accessory.</summary>
 
-![List Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-c15c646bcffee77a3945ebb25a79a7f03f0e6e2f%2Flist-template.webp?alt=media)
+![List Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ce032b2d8a82dab374433eb9f40f3347e00e412e%2Flist-template.webp?alt=media)
 
 {% hint style="info" %}
 See the [API Reference](/api-reference/user-interface/list.md) for more information about customization.
@@ -120,7 +120,7 @@ See the [API Reference](/api-reference/user-interface/list.md) for more informat
 
 <summary>Renders the output of an AI call in a Detail view.</summary>
 
-![AI Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8af8468d2f78f69d28e7da00ef75198fce867b3c%2Fai-template.webp?alt=media)
+![AI Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-57ac09c0da60f75bd7efc443c1f2e3e6d3455716%2Fai-template.webp?alt=media)
 
 </details>
 
@@ -130,7 +130,7 @@ See the [API Reference](/api-reference/user-interface/list.md) for more informat
 
 <summary>A simple tool which asks for confirmation before executing.</summary>
 
-![Tool with Confirmation Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-48fb942ab974ffd90cba6e3f0659fbd273a9a24f%2Ftool-with-confirmation-template.webp?alt=media)
+![Tool with Confirmation Template Render](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-ca0c814b5be4d12d42bb1552be1f363aeb1450eb%2Ftool-with-confirmation-template.webp?alt=media)
 
 {% hint style="info" %}
 See the [API Reference](/api-reference/tool.md) for more information about customization.

@@ -14,7 +14,7 @@ First, you need to find the source code of the extension. The easiest way to do 
 
 After you have the source code locally, open the Terminal and navigate to the extension's folder. Once there, run `npm install && npm run dev` from the extension folder in your Terminal to start developing the extension.
 
-![Open imported extension](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d93798084581d66e02d4e51c48bb8c6edd66709d%2Fbasics-open-command.webp?alt=media) ![Icon list command](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-64a3aa26124f0f72eab167839b9858c06e41e84b%2Fbasics-icon-list.webp?alt=media)
+![Open imported extension](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d08308a10aefd5804feb821a400658a7223082db%2Fbasics-open-command.webp?alt=media) ![Icon list command](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-64c74a97787793e3469baca2a2e402bef4c3d128%2Fbasics-icon-list.webp?alt=media)
 
 You should see your forked extension at the top of your root search and can open its commands.
 

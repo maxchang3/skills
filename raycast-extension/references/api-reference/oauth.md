@@ -12,7 +12,7 @@ However, if your provider doesn't support PKCE, you can use our [PKCE proxy](htt
 
 ## OAuth Flow
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-73fbf2da0684ab57bbdba779e06b3bbcfb895a01%2Foauth-overlay-twitter.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a1e2b82e50157b7b3b6b10cb44aa8f171a9db75c%2Foauth-overlay-twitter.webp?alt=media)
 
 The OAuth flow from an extension looks like this:
 

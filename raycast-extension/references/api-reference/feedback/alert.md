@@ -2,7 +2,7 @@
 
 When the user takes an important action (for example when irreversibly deleting something), you can ask for confirmation by using `confirmAlert`.
 
-![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-18a8eeb2446fdc8e95157b412aa2c84fd22ffbfa%2Falert.webp?alt=media)
+![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-cf375bb3225fe9b9a11d20d120d46c63e9096661%2Falert.webp?alt=media)
 
 ## API Reference
 
@@ -39,8 +39,7 @@ export default async function Command() {
 
 #### Return
 
-A Promise that resolves to a boolean when the user triggers one of the actions.\
-It will be `true` for the primary Action, `false` for the dismiss Action.
+A Promise that resolves to a boolean when the user triggers one of the actions. It will be `true` for the primary Action, `false` for the dismiss Action.
 
 ## Types
 
@@ -97,15 +96,14 @@ The options to create an Alert Action.
 
 Defines the visual style of an Action of the Alert.
 
-Use [Alert.ActionStyle.Default](#alert.actionstyle) for confirmations of a positive action.\
-Use [Alert.ActionStyle.Destructive](#alert.actionstyle) for confirmations of a destructive action (eg. deleting a file).
+Use [Alert.ActionStyle.Default](#alert.actionstyle) for confirmations of a positive action. Use [Alert.ActionStyle.Destructive](#alert.actionstyle) for confirmations of a destructive action (eg. deleting a file).
 
 #### Enumeration members
 
 | Name        | Value                                                                                                                                                                                                                    |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Default     | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-cf694515bf72da488eea228c3511ea5667cacfe2%2Falert-action-default.webp?alt=media)     |
-| Destructive | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-3529cca2309b77669ede9d8cc0bdff210a9b6f00%2Falert-action-destructive.webp?alt=media) |
-| Cancel      | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-e73a37408b953e1a0d6f9751d5e8f001c0f2556f%2Falert-action-cancel.webp?alt=media)      |
+| Default     | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-990238553d100bdac31f535fffefd5c2f5e5de3c%2Falert-action-default.webp?alt=media)     |
+| Destructive | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-5c2619e6e9d014de066e11fc07141762d52c65ce%2Falert-action-destructive.webp?alt=media) |
+| Cancel      | ![](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-323ffe55bb3bba0819c82d1900e4ca6a35c3453a%2Falert-action-cancel.webp?alt=media)      |
 
 

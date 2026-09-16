@@ -56,7 +56,7 @@ Here you will find requirements and guidelines that you'll need to follow in ord
     * There is no need for a subtitle for the `Search Emoji` command since it's self-explanatory
     * **Rule of thumb:** If your subtitle is almost a duplication of your command title, you probably don't need it
 
-![Example of a good subtitle](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d482752e8c76fe94fcdd4adf8d5b8ab0b94126d9%2Fgood-subtitle.webp?alt=media)
+![Example of a good subtitle](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-81d2f9f6cf8c6620eb7c7016248e5f3cd0201a7d%2Fgood-subtitle.webp?alt=media)
 
 ## Extension Icon
 
@@ -76,12 +76,13 @@ We made a new icon generator tool to ease the process of creating icons for your
 
 * If your extension requires additional setup, such as getting an API access token, enabling some preferences in other applications, or has non-trivial use cases, please provide a README file at the root folder of your extension. When a README is provided, users will see the "About This Extension" button on the preferences onboarding screen.
 * Supporting README media: Put all linked media files in a top-level `media` folder inside your extension directory. (This is different from assets that are required at runtime in your extension: they go inside the assets folder and will be bundled into your extension.)
+* For instructions shown directly beside the required preferences form, add an optional [`help.md` file](/api-reference/preferences.md#help-for-required-preferences) at the root of your extension. Use it to explain setup steps such as obtaining an API token. When help content is provided, the form displays it in place of the "About this Extension" link.
 
-![Onboarding button linking to the README file](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8bc31854cf0c64fdff60dd1782a7cce0c6acb97b%2Frequired-preference.webp?alt=media)
+![Onboarding button linking to the README file](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d7787c0158db3a2a61ea165e406321ac7d979e3f%2Frequired-preferences-2.webp?alt=media)
 
 ## Categories
 
-![Categories shown on an extension details screen](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b96d3ca00c7089cee075510e1e4b13a60eddfe64%2Fcategories-focus.webp?alt=media)
+![Categories shown on an extension details screen](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-3aca34693e3169f60524b3771ed3e42bcacd9784%2Fcategories-focus.webp?alt=media)
 
 * All extensions should be published with at least one category
 * Categories are case-sensitive and should follow the [Title Case](https://titlecaseconverter.com/rules/) convention
@@ -109,7 +110,7 @@ We made a new icon generator tool to ease the process of creating icons for your
 
 ## Screenshots
 
-![An example of an extension with screenshot metadata](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-fd3ba451deb85e08069572e61a3d138530f3e27a%2Fhn-store.webp?alt=media)
+![An example of an extension with screenshot metadata](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-0a64a3c377c52ff714ad304f74273b433548fbb9%2Fhn-store.webp?alt=media)
 
 * Screenshots are displayed in the metadata of an extension details screen, where users can click and browse through them to understand what your extension does in greater detail, before installing
 * You can add a maximum of six screenshots. We recommend adding at least three, so your extensions detail screen looks beautiful.
@@ -148,7 +149,7 @@ You can use [Raycast Wallpapers](https://www.raycast.com/wallpapers) to make you
 
 ## Version History
 
-![A CHANGELOG.md file displayed in the app](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-4e39429865f934bd7684631765f8cbfa902750f9%2Fversion-history.webp?alt=media)
+![A CHANGELOG.md file displayed in the app](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-b1e8d9811d200f9f23a68d95a9d9b7353a673ad9%2Fversion-history.webp?alt=media)
 
 * Make it easier for users to see exactly what notable changes have been made between each release of your extension with a `CHANGELOG.md` file in your extension metadata
   * To add Version History to your extension, add a `CHANGELOG.md` file to the root folder of your extension
@@ -229,7 +230,7 @@ You can use [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) to help you
 
 ### Preferences
 
-![Required preferences will be shown when opening the command](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a1ab8634fce260f92c072f77830f843cbd2a55a2%2Frequired-preferences-2.webp?alt=media)
+![Required preferences will be shown when opening the command](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d7787c0158db3a2a61ea165e406321ac7d979e3f%2Frequired-preferences-2.webp?alt=media)
 
 * Use the [preferences API](https://developers.raycast.com/api-reference/preferences) to let your users configure your extension or for providing credentials like API tokens
   * When using `required: true`, Raycast will ask the user to set preferences before continuing with an extension. See the example [here](https://github.com/raycast/extensions/blob/main/extensions/gitlab/package.json#L150).
@@ -237,7 +238,7 @@ You can use [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) to help you
 
 ### Action Panel
 
-![Raycast Action Panel component](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-25a03b5271959426230e724a733f30e7597dd1bf%2Faction-panel.webp?alt=media)
+![Raycast Action Panel component](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-a1bf254ceb4ad9679111270a8a123946d5538877%2Faction-panel.webp?alt=media)
 
 * Actions in the action panel should also follow the **Title Case** naming convention
   * ✅ `Open in Browser`, `Copy to Clipboard`

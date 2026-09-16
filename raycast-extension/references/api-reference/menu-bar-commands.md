@@ -74,11 +74,9 @@ Of course, our pull request command wouldn't be of that much use if we had to te
 
 Your root search should look similar to:
 
-![Menu Bar Command - Activate Background Refresh](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-25f5659825806f33bb7cb303da04680bdb29bcbf%2Fmenu-bar-activate-command.webp?alt=media)
+![Menu Bar Command - Activate Background Refresh](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-23fa36107802f596054152b71160ea76a1217d4b%2Fmenu-bar-activate-command.webp?alt=media)
 
-Running it once should activate it to:
-
-![Menu Bar Command - Refresh](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-8f655dafc225472ab9096af040de0243f651dfb3%2Fmenu-bar-refresh.webp?alt=media)
+Running the command activates its menu bar item. Run it again to refresh the item.
 
 ## Lifecycle
 

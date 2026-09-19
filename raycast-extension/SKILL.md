@@ -1,95 +1,43 @@
 ---
 name: raycast-extension
-description: Use when building, debugging, or maintaining Raycast extensions. Triggers for @raycast/api components, extension preferences, Raycast utilities, command architecture, publishing requirements, and cross-platform compatibility.
+description: Build or debug Raycast API/UI integrations, manifest configuration, and platform behavior; prepare extensions for the Raycast Store.
 ---
 
-## Overview
+# Raycast Extension
 
-Raycast extensions are built with React and Node.js (the built-in version is v22.22.2).
+Use this skill for Raycast-specific decisions. Ordinary provider protocols, parsing, and TypeScript refactors need it only when they cross a Raycast boundary.
 
-### Documentation & Tooling
+## Read What the Task Needs
 
-- **Docs Reference**: Check `references/` for official API documentation.
-- **Sync Docs**: `node scripts/sync-docs.mjs`
-- **Query AI**: `node scripts/query-docs.js "How to...?"`
+Paths below are relative to this skill. Bundled references are documentation snapshots; check the installed package types for available signatures and current [official documentation](https://developers.raycast.com/) for version-dependent behavior. Verify native behavior when it matters; mocked tests cannot establish what Raycast displays or how it restores a command.
 
-### Entry Points
+| Task | Relevant guidance |
+| --- | --- |
+| Create an extension or change command/tool entry points | [Create Extension](references/basics/create-your-first-extension.md), [manifest](references/information/manifest.md), [lifecycle](references/information/lifecycle.md) |
+| UI, actions, navigation, or shortcuts | [UI](references/api-reference/user-interface.md), [ActionPanel](references/api-reference/user-interface/action-panel.md), [keyboard](references/api-reference/keyboard.md); [cookbook](assets/cookbook.md) for optional snippets |
+| Preferences or credentials | [Preferences](references/api-reference/preferences.md), [LocalStorage](references/api-reference/storage.md), [OAuth utilities](references/utilities/oauth.md) |
+| Fetching, React state, or caching | [Utility hooks](references/utilities/react-hooks.md), [Cache](references/api-reference/cache.md), [useCachedPromise](references/utilities/react-hooks/usecachedpromise.md), [withCache](references/utilities/functions/withcache.md) |
+| Native behavior, permissions, or hard-to-reproduce failures | [Troubleshooting](guides/troubleshooting.md) and the affected API's reference |
+| Raycast Store submission or release preparation | [Publishing checklist](assets/publish-checklist.md); ordinary repository PRs do not trigger Store preparation |
 
-Raycast extensions define executable entry points in `package.json` through either `commands` or `tools`.
+Read the relevant page or section, not the full reference collection. Platform support is documented with each API and in the manifest; do not pin a runtime version in this skill.
 
-#### Commands (`package.json > commands`)
+## Implementation Decisions
 
-The `name` property exactly matches the entry file: `src/{name}.tsx` (or `.ts`).
+- Prefer native components and APIs, and use `@raycast/utils` when its semantics fit. Hooks and Promise caches are not automatic replacements for streaming, request cancellation, explicit regeneration, or custom cache invalidation. Check whether a cache hit also revalidates when avoiding network requests matters.
+- Declare only supported target platforms. For APIs, scripts, paths, and custom shortcuts affected by a change, check compatibility and guard platform-specific behavior. Adding Windows to a manifest alone does not establish Windows support.
 
-- **View Commands** (`mode: "view"`) — Export a React component. Raycast renders the UI natively.
-- **No-View Commands** (`mode: "no-view"`) — Export an async function. Interact with users through APIs such as `showHUD` and `showToast`; ideal for quick background actions.
-- **Menu Bar Commands** (`mode: "menu-bar"`) — Export a React component using `MenuBarExtra`, rendered natively in the macOS menu bar.
+## Red Lines
 
-#### AI Tools (`package.json > tools`)
+- **Package managers:** Use npm and `package-lock.json` for Raycast extension dependencies; do not introduce yarn, pnpm, or bun.
+- **ESLint:** Use `defineConfig` from `eslint/config` for new or changed flat configs when supported by the installed ESLint version. Do not rewrite unrelated lint configuration.
+- **Preferences:** Use generated `Preferences` and `Arguments` from `raycast-env.d.ts`, with `getPreferenceValues<Preferences>()`. Do not redefine these types or add fallbacks for manifest-guaranteed values. Numeric preferences use a validated `textfield`, not a `number` type.
+- **Credentials:** Do not request direct Keychain access. Use password preferences for fixed credentials and Raycast's encrypted `LocalStorage` for dynamic user configuration. `Cache` stores evictable files on disk; do not use it for credentials.
+- **Networking:** Do not add custom proxy agents or extension-level proxy configuration. Use Raycast's system proxy support with a compatible network client; verify the actual client when troubleshooting proxy behavior.
+- **Errors:** Do not leave failures from `getSelectedText`, `launchCommand`, or other async API calls unhandled. Catch at the boundary that can recover or show feedback; an existing caller catch or rejection handler is sufficient.
+- **UI behavior:** Do not override the root command's `navigationTitle`. Preserve existing primary/secondary actions when adding functionality because they receive default shortcuts. Use `Keyboard.Shortcut.Common` where appropriate and verify concrete key combinations against the target runtime before documenting them.
+- **Localization:** Keep extension UI in US English; do not introduce custom UI localization wrappers. This does not restrict translated content, dictionary results, or language preferences that are part of the extension's functionality.
 
-The `name` property maps directly to `src/tools/{name}.ts`.
+## Maintaining the Bundled Docs
 
-Export a default async function returning JSON-serializable data. Requires Raycast Pro for AI interactions.
-
-### Lifecycle
-
-Commands and tools are unloaded when execution finishes, the menu closes, or the user returns to root search. Do not rely on long-lived in-memory state.
-
-
-## Quick Reference
-
-### Scaffolding & Setup
-
-- **Create New Extension**: Open Raycast App -> Search **"Create Extension"** command. This natively generates the official folder structure, `package.json`, and proper configurations. Do not create projects manually from scratch.
-
-### `@raycast/api` (Built-in APIs - Prefer over custom implementations)
-
-| Instead of... | Use API Equivalent | Why? |
-| - | - | - |
-| `fs.unlink()` / `rm` | `trash()` | Safely moves files to the system bin |
-| Custom OAuth | `OAuthService` | Built-in auth (pair with `withAccessToken` from utils) |
-| Manual notifications | `showToast()`, `showHUD()` | Native UX patterns |
-| Custom persistence | `LocalStorage`, `Cache` | Built-in storage |
-| Custom encryption | `password` preference type | Secure credential storage (via Manifest) |
-
-### `@raycast/utils` (Requires `npm install @raycast/utils` - Prefer over custom hooks)
-
-| Instead of... | Use Utils Equivalent | Why? |
-| - | - | - |
-| `fetch` + `useEffect` / Custom State | `useFetch`, `usePromise` | Handles loading, pagination, and caching natively |
-| `useState` + `LocalStorage` | `useCachedState` | Persists React state across extension launches natively |
-| Manual form state & validation | `useForm` | Built-in validation, focus management, and draft persistence |
-| Manual error toast logic | `showFailureToast` | Standardized error handling |
-| Custom favicon/avatar | `getFavicon()`, `getAvatarIcon()` | Built-in utilities |
-| Custom shell/script execution | `useExec`, `runAppleScript`, `runPowerShellScript` | Handles lifecycle and platform scripts natively |
-
-## Cross-Platform (macOS & Windows)
-
-- **Manifest**: Explicitly add `"platforms": ["macOS", "Windows"]`.
-- **API Support**: Always verify platform support in official docs before use. Guard platform-specific APIs with runtime checks.
-- **Keyboard Shortcuts**: Use `Keyboard.Shortcut.Common` for automatic cross-platform support. For custom shortcuts, use the nested platform syntax (e.g., `{ macOS: ..., Windows: ... }`).
-- **Preferences**: Platform-specific defaults are supported by passing an object: `{ "macOS": ..., "Windows": ... }`.
-- **File Picker**: `canChooseDirectories` is ignored on Windows when `canChooseFiles` is `true`.
-- **Paths & Shells**: Never assume POSIX-style paths (use Node.js path utils). Never assume Bash/Zsh/PowerShell availability unless the extension is platform-restricted.
-
-## Red Flags — STOP and Correct
-
-- 🚩 **Package Managers**: Use ONLY `npm` and `package-lock.json`. Do NOT use `yarn`, `pnpm`, or `bun`.
-- 🚩 **ESLint**: For v9+, ensure the flat configuration uses `import { defineConfig } from "eslint/config"`.
-- 🚩 **Preferences**: Do NOT create a manual `Preferences` interface; use generated types from `raycast-env.d.ts`. Do NOT use redundant `?.`, `??`, or `||` for preferences with defaults. Raycast has no `number` preference type (use `textfield` with validation).
-- 🚩 **Security**: Do NOT request direct Keychain access. Use Raycast preferences.
-- 🚩 **Networking**: Do NOT write custom proxy logic (e.g., `https-proxy-agent`). Raycast's native `fetch` automatically respects the "Use System Proxy Settings" configuration in the app.
-- 🚩 **Error Handling**: Do NOT call `launchCommand` or `getSelectedText()` without a `try-catch` block. They throw errors and will crash the extension if permissions fail or no text is selected.
-- 🚩 **UX**: Do NOT change the root command's `navigationTitle`.
-- 🚩 **Localization**: Do NOT build custom translation wrappers (Raycast targets US English).
-
-## Implementation & UX Patterns
-
-- **Actions First**: Expose primary functionality through `ActionPanel`. Append `…` to actions that open additional flows.
-- **States**: Provide meaningful `List.EmptyView` content. Use `isLoading` during async operations.
-- **Naming**: Use Title Case for commands and actions. Always provide placeholders for text fields.
-- **Publishing**: When the user asks you to prepare the extension for publishing or submit a PR, strictly follow the steps in `assets/publish-checklist.md`.
-
-## Cookbook Snippets
-
-If you need boilerplate code for UI components like List, Detail, Form, or Cache, please read `assets/cookbook.md`. For comprehensive examples, see `references/examples/`.
+For a missing or stale API detail, fetch that official page. Run `node scripts/sync-docs.mjs` from this skill directory only when refreshing the bundled documentation is part of the task. `node scripts/query-docs.js "question"` is an optional documentation lookup; verify its answer against the cited API page.

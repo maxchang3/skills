@@ -24,6 +24,8 @@ Read the relevant page or section, not the full reference collection. Platform s
 
 ## Implementation Decisions
 
+For UI review or utility replacements, read [UI and API review notes](guides/ui-and-api-review.md) for favicon, file disposal, fetch, and submenu behavior.
+
 - Prefer native components and APIs, and use `@raycast/utils` when its semantics fit. Hooks and Promise caches are not automatic replacements for streaming, request cancellation, explicit regeneration, or custom cache invalidation. Check whether a cache hit also revalidates when avoiding network requests matters.
 - Declare only supported target platforms. For APIs, scripts, paths, and custom shortcuts affected by a change, check compatibility and guard platform-specific behavior. Adding Windows to a manifest alone does not establish Windows support.
 
@@ -32,10 +34,10 @@ Read the relevant page or section, not the full reference collection. Platform s
 - **Package managers:** Use npm and `package-lock.json` for Raycast extension dependencies; do not introduce yarn, pnpm, or bun.
 - **ESLint:** Use `defineConfig` from `eslint/config` for new or changed flat configs when supported by the installed ESLint version. Do not rewrite unrelated lint configuration.
 - **Preferences:** Use generated `Preferences` and `Arguments` from `raycast-env.d.ts`, with `getPreferenceValues<Preferences>()`. Do not redefine these types or add fallbacks for manifest-guaranteed values. Numeric preferences use a validated `textfield`, not a `number` type.
-- **Credentials:** Do not request direct Keychain access. Use password preferences for fixed credentials and Raycast's encrypted `LocalStorage` for dynamic user configuration. `Cache` stores evictable files on disk; do not use it for credentials.
+- **Credentials:** Do not request direct Keychain access. Preferences are encrypted regardless of their supported type; use password fields to mask fixed credentials and Raycast's encrypted `LocalStorage` for dynamic user configuration. `Cache` stores evictable files on disk; do not use it for credentials.
 - **Networking:** Do not add custom proxy agents or extension-level proxy configuration. Use Raycast's system proxy support with a compatible network client; verify the actual client when troubleshooting proxy behavior.
 - **Errors:** Do not leave failures from `getSelectedText`, `launchCommand`, or other async API calls unhandled. Catch at the boundary that can recover or show feedback; an existing caller catch or rejection handler is sufficient.
-- **UI behavior:** Do not override the root command's `navigationTitle`. Preserve existing primary/secondary actions when adding functionality because they receive default shortcuts. Use `Keyboard.Shortcut.Common` where appropriate and verify concrete key combinations against the target runtime before documenting them.
+- **UI behavior:** Do not override the root command's `navigationTitle`. Group actions by purpose and frequency of use while preserving existing primary/secondary actions and their default shortcuts, unless the task intentionally changes that behavior. Use `Keyboard.Shortcut.Common` where appropriate and verify concrete key combinations against the target runtime before documenting them.
 - **Localization:** Keep extension UI in US English; do not introduce custom UI localization wrappers. This does not restrict translated content, dictionary results, or language preferences that are part of the extension's functionality.
 
 ## Maintaining the Bundled Docs

@@ -1,6 +1,6 @@
 # Raycast Developer Documentation Index
 
-> **Last Synced:** 2026-09-16
+> **Last Synced:** 2026-09-25
 
 # Raycast API
 
@@ -18,8 +18,9 @@
 - [Getting Started](./ai/getting-started.md): This guide explains how to use AI inside extensions.
 - [Create an AI Extension](./ai/create-an-ai-extension.md): Learn how to turn a regular extension into an AI-powered one.
 - [Learn Core Concepts of AI Extensions](./ai/learn-core-concepts-of-ai-extensions.md): Get to know the core concepts of AI extensions.
-- [Write Evals for Your AI Extension](./ai/write-evals-for-your-ai-extension.md): Make your AI Extension more reliable by writing evals.
+- [Evals](./ai/evals.md): Write and run AI Extension evals with tool mocks, expectations, and suggested prompts.
 - [Follow Best Practices for AI Extensions](./ai/follow-best-practices-for-ai-extensions.md): Make the most out of your AI Extension by following best practices.
+- [Provide AI Models](./ai/provide-ai-models.md): This guide explains how an extension can provide AI models to Raycast.
 - [Getting Started](./teams/getting-started.md): This guide sets you up with Raycast for Teams.
 - [Publish a Private Extension](./teams/publish-a-private-extension.md): Learn how to share an extension in your organization's private extension store
 - [Collaborate on Private Extensions](./teams/collaborate-on-private-extensions.md): This guide explains how to collaborate with your team on extensions.

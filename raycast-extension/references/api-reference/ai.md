@@ -139,6 +139,89 @@ export default async function main() {
 
 A Promise that resolves with a prompt completion.
 
+### AI.refreshModels
+
+Refreshes the models provided by this extension. Only relevant for extensions that [provide AI models](/ai/provide-ai-models.md): call it after changing locally available models, for example from a Manage Models command.
+
+#### Signature
+
+```typescript
+async function refreshModels(): Promise<void>;
+```
+
+#### Example
+
+```typescript
+import { AI, showHUD } from "@raycast/api";
+
+export default async function command() {
+  await downloadModel("llama-3.3-70b");
+  await AI.refreshModels();
+  await showHUD("Model installed");
+}
+```
+
+#### Return
+
+A Promise that resolves when Raycast has re-run your extension's `getModels` export.
+
+### AI.experimental\_decide
+
+Answer typed questions about a shared state in one request. Use a `noul` question for a yes/no probability, a `choice` question to select from named options, or a `score` question to rate against ordered levels.
+
+{% hint style="warning" %}
+This API is experimental. Its signature, question types, and response format may change in future releases.
+{% endhint %}
+
+Pass `{ state, questions }` as the first argument and an optional `{ signal }` as the second. Answer types are inferred from the questions you pass.
+
+#### Example
+
+```typescript
+import { AI, showHUD } from "@raycast/api";
+
+export default async function command() {
+  const answers = await AI.experimental_decide({
+    state: {
+      message: "The app crashes whenever I open the billing page. Please fix it today!",
+      page: "billing",
+    },
+    questions: {
+      urgent: { type: "noul", instructions: "Does this need urgent attention?" },
+      severity: {
+        type: "score",
+        instructions: "How severe is the issue?",
+        criteria: ["Cosmetic", "Workaround available", "Blocking"],
+      },
+      category: {
+        type: "choice",
+        instructions: "Classify the request.",
+        criteria: {
+          bug: "A defect or crash in the product",
+          billing: "A question about charges or subscriptions",
+          other: null,
+        },
+      },
+    },
+  });
+
+  // Typed as "bug" | "billing" | "other" when questions are passed as a literal.
+  await showHUD(`${answers.category.choice}: severity ${answers.severity.score}`);
+}
+```
+
+`input.state` is the JSON-serializable value all questions are evaluated against. Strings are passed as is; other values are serialized with `JSON.stringify`. Values that cannot be serialized, such as circular objects, BigInts, or top-level `undefined`, reject the promise.
+
+`input.questions` maps your question names to one of these shapes:
+
+* `{ type: "noul", instructions: string }`: returns `{ type: "noul", noul: number }`, where `noul` is a probability between 0 and 1.
+* `{ type: "choice", instructions: string, criteria: Record<string, string | null> }`: returns `{ type: "choice", choice, confidence: number, probabilities }`. Each criteria key is an allowed choice; its value describes that choice, or is `null` when the name is sufficient. `probabilities` contains a probability between 0 and 1 for each offered choice.
+* `{ type: "score", instructions: string, criteria: readonly string[] }`: `criteria` contains 2–10 non-empty descriptions in order from low to high. Returns `{ type: "score", score: number, confidence: number, legend, probabilities }`. The score ranges from `0` to `criteria.length - 1` and can be fractional. `legend` maps level indices (string keys such as `"0"`) to descriptions; `probabilities` maps those indices to probabilities between 0 and 1.
+
+The result is the answers object, keyed directly by your question names. Unlike `AI.ask`, this method returns a single result and does not stream text.
+
+Pass `options.signal` to stop waiting for a result, for example `{ signal: AbortSignal.timeout(10_000) }`. The backend may finish a request that has already been submitted.
+
 ## Types
 
 ### AI.Creativity
@@ -159,35 +242,38 @@ The AI model to use to answer to the prompt. Defaults to `AI.Model["OpenAI_GPT-5
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | OpenAI\_GPT-5\_mini              | OpenAI's compact model, great for well-defined tasks and precise prompts.                                                                   |
 | OpenAI\_GPT-5\_nano              | OpenAI's lightweight model, great for summarization and classification tasks.                                                               |
-| OpenAI\_GPT-4.1                  | OpenAI's flagship model optimized for complex problem solving.                                                                              |
+| OpenAI\_GPT-4.1                  | OpenAI's previous generation flagship model optimized for complex problem solving.                                                          |
 | OpenAI\_GPT-4.1\_mini            | Balanced GPT-4.1 variant optimized for speed and cost efficiency.                                                                           |
 | OpenAI\_GPT-4.1\_nano            | Fastest and most cost-effective GPT-4.1 variant.                                                                                            |
 | OpenAI\_GPT-4                    | Previous generation GPT-4 model with broad knowledge and complex instruction handling.                                                      |
 | OpenAI\_GPT-4o                   | Advanced OpenAI model optimized for speed and complex problem solving.                                                                      |
 | OpenAI\_GPT-4o\_mini             | Fast and intelligent model for everyday tasks.                                                                                              |
 | OpenAI\_GPT-5.1                  | OpenAI's model with adaptive reasoning, great for coding and agentic tasks across domains.                                                  |
-| OpenAI\_GPT-5.2                  | OpenAI's most capable model for professional work and long-running agents with state-of-the-art tool-calling.                               |
+| OpenAI\_GPT-5.2                  | OpenAI's GPT-5.2-class model for professional work and long-running agents with strong tool-calling.                                        |
 | OpenAI\_GPT-5.3\_Instant         | OpenAI's fast, capable GPT-5.3-class model for everyday work with improved info-seeking, how-tos, and technical writing.                    |
 | OpenAI\_GPT-5.3\_Codex           | A version of GPT-5.3 optimized for agentic coding tasks in Codex or similar environments.                                                   |
 | OpenAI\_GPT-5.4                  | OpenAI's high-performance GPT-5.4-class model for professional work and long-running agents with state-of-the-art tool-calling.             |
 | OpenAI\_GPT-5.4\_mini            | OpenAI's strongest mini model yet for coding and agentic workflows.                                                                         |
 | OpenAI\_GPT-5.4\_nano            | OpenAI's cheapest GPT-5.4-class model for simpler tasks.                                                                                    |
-| OpenAI\_GPT-5.5                  | OpenAI's most capable model for complex reasoning and long-running agentic work.                                                            |
+| OpenAI\_GPT-5.5                  | OpenAI's high-performance GPT-5.5-class model for complex reasoning and long-running agentic work.                                          |
 | OpenAI\_GPT-5.5\_Instant         | OpenAI's fast, capable model for everyday work with improved info-seeking, how-tos, and technical writing.                                  |
 | OpenAI\_GPT-5.6\_Sol             | OpenAI's frontier GPT-5.6 model for complex, professional-grade reasoning and long-running agentic work.                                    |
 | OpenAI\_GPT-5.6\_Terra           | OpenAI's balanced GPT-5.6 model for everyday work across writing, analysis, and coding.                                                     |
 | OpenAI\_GPT-5.6\_Luna            | OpenAI's fastest GPT-5.6 model for responsive everyday tasks.                                                                               |
 | OpenAI\_GPT-6\_Astra             | OpenAI's frontier GPT-6 model for the hardest end-to-end reasoning, coding, and agentic work.                                               |
+| OpenAI\_GPT-6\_Sol               | OpenAI's GPT-6 model for complex coding and agentic workflows.                                                                              |
+| OpenAI\_GPT-6\_Luna              | OpenAI's efficient GPT-6 model for focused, high-volume tasks.                                                                              |
 | OpenAI\_o4-mini                  | Fast, efficient model optimized for coding and visual tasks.                                                                                |
 | OpenAI\_o3-mini                  | Fast reasoning model optimized for STEM tasks.                                                                                              |
 | Groq\_GPT-OSS\_20b               | OpenAI's first open-source model, 20b variant.                                                                                              |
 | Groq\_GPT-OSS\_120b              | OpenAI's first open-source model, 120b variant.                                                                                             |
 | Anthropic\_Claude\_Haiku\_4.5    | Anthropic's offering focusing on being the best combination of performance and speed.                                                       |
-| Anthropic\_Claude\_Sonnet\_4.6   | Anthropic's most intelligent model with the highest intelligence across most tasks.                                                         |
+| Anthropic\_Claude\_Sonnet\_4.6   | Anthropic's previous generation Sonnet model with high intelligence across most tasks.                                                      |
 | Anthropic\_Claude\_Sonnet\_5     | Anthropic's best combination of speed and intelligence, with combined reasoning and non-reasoning capabilities.                             |
 | Anthropic\_Claude\_Opus\_4.7     | Anthropic's previous generation Opus model with combined reasoning and non-reasoning capabilities.                                          |
-| Anthropic\_Claude\_Opus\_4.8     | Anthropic's most powerful model with combined reasoning and non-reasoning capabilities.                                                     |
-| Anthropic\_Claude\_Opus\_5       | Anthropic's most powerful model with combined reasoning and non-reasoning capabilities.                                                     |
+| Anthropic\_Claude\_Opus\_4.8     | Anthropic's previous generation Opus model with combined reasoning and non-reasoning capabilities.                                          |
+| Anthropic\_Claude\_Opus\_5       | Anthropic's previous flagship Opus model with combined reasoning and non-reasoning capabilities.                                            |
+| Anthropic\_Claude\_Opus\_5.5     | Anthropic's most powerful model with combined reasoning and non-reasoning capabilities.                                                     |
 | Anthropic\_Claude\_Fable\_5.1    | Anthropic's Mythos-class model for complex tasks, with safeguards for general use.                                                          |
 | Perplexity\_Sonar                | Fast Perplexity model with integrated search capabilities.                                                                                  |
 | Perplexity\_Sonar\_Pro           | Advanced Perplexity model for complex queries with search integration.                                                                      |
@@ -207,10 +293,11 @@ The AI model to use to answer to the prompt. Defaults to `AI.Model["OpenAI_GPT-5
 | Google\_Gemini\_2.5\_Pro         | Previous generation thinking model for complex problem solving.                                                                             |
 | Google\_Gemini\_2.5\_Flash       | Fast, well-rounded thinking model.                                                                                                          |
 | Google\_Gemini\_2.5\_Flash\_Lite | Fast model optimized for large-scale text output.                                                                                           |
-| xAI\_Grok-4.6                    | xAI's latest flagship Grok model, delivering frontier reasoning, stronger coding, and multimodal understanding.                             |
-| xAI\_Grok-4.5                    | xAI's latest flagship Grok model, delivering frontier reasoning, stronger coding, and multimodal understanding.                             |
+| xAI\_Grok-4.7                    | xAI's latest flagship Grok model, delivering frontier reasoning, stronger coding, and multimodal understanding.                             |
+| xAI\_Grok-4.6                    | xAI's previous flagship Grok model with frontier reasoning, strong coding, and multimodal understanding.                                    |
+| xAI\_Grok-4.5                    | xAI's earlier flagship Grok model with strong reasoning, coding, and multimodal understanding.                                              |
 | xAI\_Grok-4.3                    | xAI's advanced reasoning model with enhanced capabilities.                                                                                  |
-| Vercel\_GLM-5.2                  | Z.AI's next-generation flagship model with MoE + DSA architecture for efficient long-context coding, agentic, and reasoning tasks.          |
+| Vercel\_GLM-5.2                  | Z.AI's previous flagship model with MoE + DSA architecture for efficient long-context coding, agentic, and reasoning tasks.                 |
 | Vercel\_GLM-5.3                  | Z.AI's flagship model with stronger coding and agent capabilities than GLM-5.2, driven by post-training on the same base.                   |
 | Vercel\_GLM-5.3\_Flash           | Z.AI's native multimodal coding model with hybrid attention, visual coding, and agentic tool use.                                           |
 | Vercel\_Kimi\_K2.7\_Code         | Moonshot AI's code-optimized trillion-parameter multimodal model with enhanced coding capabilities and agentic tool-calling.                |
@@ -225,6 +312,16 @@ The AI model to use to answer to the prompt. Defaults to `AI.Model["OpenAI_GPT-5
 
 If a model isn't available to the user (or has been disabled by the user), Raycast will fallback to a similar one.
 
+### AI.ModelSelector
+
+The AI model to use to answer the prompt.
+
+```typescript
+type ModelSelector = AI.Model | { id: string };
+```
+
+Pass an [`AI.Model`](#ai.model) value to use a Raycast-hosted model, or `{ id: "..." }` to use a model [provided by this extension](/ai/provide-ai-models.md) through `ai.modelProvider`. The ID is the local model `id` returned by `getModels()`.
+
 ### AI.AskOptions
 
 #### Properties
@@ -232,7 +329,7 @@ If a model isn't available to the user (or has been disabled by the user), Rayca
 | Property   | Description                                                                                                                                                                                                                                                      | Type                                                                          |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
 | creativity | Concrete tasks, such as fixing grammar, require less creativity while open-ended questions, such as generating ideas, require more. If a number is passed, it needs to be in the range 0-2. For larger values, 2 will be used. For lower values, 0 will be used. | [`AI.Creativity`](#ai.creativity)                                             |
-| model      | The AI model to use to answer to the prompt.                                                                                                                                                                                                                     | [`AI.Model`](#ai.model)                                                       |
+| model      | The AI model to use to answer to the prompt. Pass an `AI.Model` value to use a Raycast-hosted model, or `{ id: "..." }` to use a model provided by this extension through `ai.modelProvider`. The ID is the local model `id` returned by `getModels()`.          | [`AI.ModelSelector`](#ai.modelselector)                                       |
 | signal     | Abort signal to cancel the request.                                                                                                                                                                                                                              | [`AbortSignal`](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) |
 
 ## Rate Limit

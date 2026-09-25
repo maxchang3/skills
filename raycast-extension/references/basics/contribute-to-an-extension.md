@@ -6,7 +6,7 @@ All published extensions are open-source and can be found in [this repository](h
 
 ## Get source code
 
-First, you need to find the source code of the extension. The easiest way to do this is to use the `Fork Extension` action in the Raycast's root search.
+First, you need to find the source code of the extension. The easiest way to do this is to use the `Fork Extension` action on a command of the extension in the Raycast's root search.
 
 ![Fork an extension](https://2922539984-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Me_8A39tFhZg3UaVoSN%2Fuploads%2Fgit-blob-d8248b215be20ea329b284134cce26609fb91dde%2Ffork-extension.webp?alt=media)
 

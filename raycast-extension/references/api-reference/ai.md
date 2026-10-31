@@ -236,67 +236,43 @@ If a number is passed, it needs to be in the range 0-2. For larger values, 2 wil
 
 ### AI.Model
 
-The AI model to use to answer to the prompt. Defaults to `AI.Model["OpenAI_GPT-5.6_Luna"]`.
+The AI model to use to answer to the prompt. Defaults to `AI.Model["OpenAI_GPT-6_Luna"]`.
 
 | Model                            | Description                                                                                                                                 |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| OpenAI\_GPT-5\_mini              | OpenAI's compact model, great for well-defined tasks and precise prompts.                                                                   |
-| OpenAI\_GPT-5\_nano              | OpenAI's lightweight model, great for summarization and classification tasks.                                                               |
-| OpenAI\_GPT-4.1                  | OpenAI's previous generation flagship model optimized for complex problem solving.                                                          |
-| OpenAI\_GPT-4.1\_mini            | Balanced GPT-4.1 variant optimized for speed and cost efficiency.                                                                           |
-| OpenAI\_GPT-4.1\_nano            | Fastest and most cost-effective GPT-4.1 variant.                                                                                            |
-| OpenAI\_GPT-4                    | Previous generation GPT-4 model with broad knowledge and complex instruction handling.                                                      |
-| OpenAI\_GPT-4o                   | Advanced OpenAI model optimized for speed and complex problem solving.                                                                      |
-| OpenAI\_GPT-4o\_mini             | Fast and intelligent model for everyday tasks.                                                                                              |
-| OpenAI\_GPT-5.1                  | OpenAI's model with adaptive reasoning, great for coding and agentic tasks across domains.                                                  |
-| OpenAI\_GPT-5.2                  | OpenAI's GPT-5.2-class model for professional work and long-running agents with strong tool-calling.                                        |
-| OpenAI\_GPT-5.3\_Instant         | OpenAI's fast, capable GPT-5.3-class model for everyday work with improved info-seeking, how-tos, and technical writing.                    |
-| OpenAI\_GPT-5.3\_Codex           | A version of GPT-5.3 optimized for agentic coding tasks in Codex or similar environments.                                                   |
 | OpenAI\_GPT-5.4                  | OpenAI's high-performance GPT-5.4-class model for professional work and long-running agents with state-of-the-art tool-calling.             |
 | OpenAI\_GPT-5.4\_mini            | OpenAI's strongest mini model yet for coding and agentic workflows.                                                                         |
-| OpenAI\_GPT-5.4\_nano            | OpenAI's cheapest GPT-5.4-class model for simpler tasks.                                                                                    |
 | OpenAI\_GPT-5.5                  | OpenAI's high-performance GPT-5.5-class model for complex reasoning and long-running agentic work.                                          |
 | OpenAI\_GPT-5.5\_Instant         | OpenAI's fast, capable model for everyday work with improved info-seeking, how-tos, and technical writing.                                  |
-| OpenAI\_GPT-5.6\_Sol             | OpenAI's frontier GPT-5.6 model for complex, professional-grade reasoning and long-running agentic work.                                    |
 | OpenAI\_GPT-5.6\_Terra           | OpenAI's balanced GPT-5.6 model for everyday work across writing, analysis, and coding.                                                     |
 | OpenAI\_GPT-5.6\_Luna            | OpenAI's fastest GPT-5.6 model for responsive everyday tasks.                                                                               |
 | OpenAI\_GPT-6\_Astra             | OpenAI's frontier GPT-6 model for the hardest end-to-end reasoning, coding, and agentic work.                                               |
 | OpenAI\_GPT-6\_Sol               | OpenAI's GPT-6 model for complex coding and agentic workflows.                                                                              |
+| OpenAI\_GPT-6.1\_Sol             | OpenAI's GPT-6.1 model for complex coding and agentic workflows.                                                                            |
 | OpenAI\_GPT-6\_Luna              | OpenAI's efficient GPT-6 model for focused, high-volume tasks.                                                                              |
-| OpenAI\_o4-mini                  | Fast, efficient model optimized for coding and visual tasks.                                                                                |
-| OpenAI\_o3-mini                  | Fast reasoning model optimized for STEM tasks.                                                                                              |
 | Groq\_GPT-OSS\_20b               | OpenAI's first open-source model, 20b variant.                                                                                              |
 | Groq\_GPT-OSS\_120b              | OpenAI's first open-source model, 120b variant.                                                                                             |
-| Anthropic\_Claude\_Haiku\_4.5    | Anthropic's offering focusing on being the best combination of performance and speed.                                                       |
+| Anthropic\_Claude\_Haiku\_5.5    | Anthropic's fastest model for high-volume and latency-sensitive tasks, with combined reasoning and non-reasoning capabilities.              |
 | Anthropic\_Claude\_Sonnet\_4.6   | Anthropic's previous generation Sonnet model with high intelligence across most tasks.                                                      |
 | Anthropic\_Claude\_Sonnet\_5     | Anthropic's best combination of speed and intelligence, with combined reasoning and non-reasoning capabilities.                             |
-| Anthropic\_Claude\_Opus\_4.7     | Anthropic's previous generation Opus model with combined reasoning and non-reasoning capabilities.                                          |
-| Anthropic\_Claude\_Opus\_4.8     | Anthropic's previous generation Opus model with combined reasoning and non-reasoning capabilities.                                          |
+| Anthropic\_Claude\_Sonnet\_5.5   | Anthropic's best combination of speed and intelligence, with combined reasoning and non-reasoning capabilities.                             |
 | Anthropic\_Claude\_Opus\_5       | Anthropic's previous flagship Opus model with combined reasoning and non-reasoning capabilities.                                            |
 | Anthropic\_Claude\_Opus\_5.5     | Anthropic's most powerful model with combined reasoning and non-reasoning capabilities.                                                     |
 | Anthropic\_Claude\_Fable\_5.1    | Anthropic's Mythos-class model for complex tasks, with safeguards for general use.                                                          |
 | Perplexity\_Sonar                | Fast Perplexity model with integrated search capabilities.                                                                                  |
 | Perplexity\_Sonar\_Pro           | Advanced Perplexity model for complex queries with search integration.                                                                      |
-| Mistral\_Nemo                    | Small, Apache-licensed model built with NVIDIA.                                                                                             |
+| Vercel\_Muse\_Spark\_1.3         | Meta's flagship agentic reasoning model with multimodal understanding and zero-shot tool/MCP use.                                           |
+| Vercel\_Muse\_Wonder\_1.0        | Meta's frontier model for complex coding and long-running agentic work, with multimodal understanding and reliable tool use.                |
 | Mistral\_Large                   | Top-tier reasoning model with strong multilingual support.                                                                                  |
 | Mistral\_Medium                  | A powerful, cost-effective, frontier-class multimodal model.                                                                                |
 | Mistral\_Small                   | Latest enterprise-grade small model with improved reasoning.                                                                                |
 | Mistral\_Codestral               | Specialized model for code-related tasks and testing.                                                                                       |
+| Google\_Gemini\_4\_Argon         | Google's flagship reasoning model for complex software engineering, math and science, and long-running agentic work.                        |
 | Google\_Gemini\_3.8\_Flash       | Balances speed with intelligence for agentic and multimodal tasks.                                                                          |
-| Google\_Gemini\_3.7\_Flash       | Balances speed with intelligence for agentic and multimodal tasks.                                                                          |
-| Google\_Gemini\_3.6\_Flash       | Balances speed with intelligence for agentic and multimodal tasks.                                                                          |
-| Google\_Gemini\_3.5\_Flash       | Near-Pro intelligence with Flash-tier speed and cost for agentic workflows.                                                                 |
 | Google\_Gemini\_3.5\_Flash\_Lite | Fast, cost-effective model for high-throughput agentic workflows and data processing.                                                       |
-| Google\_Gemini\_3.1\_Flash\_Lite | Ultra-fast, cost-effective model for high-volume tasks and lightweight agentic workflows.                                                   |
-| Google\_Gemini\_3\_Flash         | Fast thinking model with strong balance of speed, performance, and value.                                                                   |
 | Google\_Gemini\_3.1\_Pro         | Next generation thinking model for complex problem solving.                                                                                 |
-| Google\_Gemini\_2.5\_Pro         | Previous generation thinking model for complex problem solving.                                                                             |
-| Google\_Gemini\_2.5\_Flash       | Fast, well-rounded thinking model.                                                                                                          |
-| Google\_Gemini\_2.5\_Flash\_Lite | Fast model optimized for large-scale text output.                                                                                           |
 | xAI\_Grok-4.7                    | xAI's latest flagship Grok model, delivering frontier reasoning, stronger coding, and multimodal understanding.                             |
 | xAI\_Grok-4.6                    | xAI's previous flagship Grok model with frontier reasoning, strong coding, and multimodal understanding.                                    |
-| xAI\_Grok-4.5                    | xAI's earlier flagship Grok model with strong reasoning, coding, and multimodal understanding.                                              |
-| xAI\_Grok-4.3                    | xAI's advanced reasoning model with enhanced capabilities.                                                                                  |
 | Vercel\_GLM-5.2                  | Z.AI's previous flagship model with MoE + DSA architecture for efficient long-context coding, agentic, and reasoning tasks.                 |
 | Vercel\_GLM-5.3                  | Z.AI's flagship model with stronger coding and agent capabilities than GLM-5.2, driven by post-training on the same base.                   |
 | Vercel\_GLM-5.3\_Flash           | Z.AI's native multimodal coding model with hybrid attention, visual coding, and agentic tool use.                                           |

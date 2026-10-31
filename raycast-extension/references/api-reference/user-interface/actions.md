@@ -299,9 +299,9 @@ export default function Command() {
 
 | Prop                                   | Description                                               | Type                                                                                                                            | Default |
 | -------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| path<mark style="color:red;">\*</mark> | The path to open.                                         | `"fs".PathLike`                                                                                                                 | -       |
+| path<mark style="color:red;">\*</mark> | The path to open.                                         | `"node:fs".PathLike`                                                                                                            | -       |
 | icon                                   | A optional icon displayed for the Action.                 | [`Image.ImageLike`](https://developers.raycast.com/api-reference/user-interface/pages/-MiwANRdFuMoKkR6at_E#image.imagelike)     | -       |
-| onShow                                 | Callback when the file or folder was shown in the Finder. | `(path: "fs".PathLike) => void`                                                                                                 | -       |
+| onShow                                 | Callback when the file or folder was shown in the Finder. | `(path: "node:fs".PathLike) => void`                                                                                            | -       |
 | shortcut                               | The keyboard shortcut for the Action.                     | [`Keyboard.Shortcut`](https://developers.raycast.com/api-reference/user-interface/pages/-MlFvcN8apU1HW0IqNpC#keyboard.shortcut) | -       |
 | title                                  | An optional title for the Action.                         | `string`                                                                                                                        | -       |
 
@@ -369,9 +369,9 @@ export default function Command() {
 
 | Prop                                    | Description                                      | Type                                                                                                                            | Default |
 | --------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| paths<mark style="color:red;">\*</mark> | The item or items to move to the trash.          | `"fs".PathLike` or `"fs".PathLike[]`                                                                                            | -       |
+| paths<mark style="color:red;">\*</mark> | The item or items to move to the trash.          | `"node:fs".PathLike` or `"node:fs".PathLike[]`                                                                                  | -       |
 | icon                                    | A optional icon displayed for the Action.        | [`Image.ImageLike`](https://developers.raycast.com/api-reference/user-interface/pages/-MiwANRdFuMoKkR6at_E#image.imagelike)     | -       |
-| onTrash                                 | Callback when all items were moved to the trash. | `(paths: "fs".PathLike \| "fs".PathLike[]) => void`                                                                             | -       |
+| onTrash                                 | Callback when all items were moved to the trash. | `(paths: "node:fs".PathLike \| "node:fs".PathLike[]) => void`                                                                   | -       |
 | shortcut                                | The optional keyboard shortcut for the Action.   | [`Keyboard.Shortcut`](https://developers.raycast.com/api-reference/user-interface/pages/-MlFvcN8apU1HW0IqNpC#keyboard.shortcut) | -       |
 | title                                   | An optional title for the Action.                | `string`                                                                                                                        | -       |
 

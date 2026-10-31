@@ -62,7 +62,7 @@ Pastes text or a file to the current selection of the frontmost application.
 #### Signature
 
 ```typescript
-async function paste(content: string | Content): Promise<void>;
+async function paste(content: string | number | Content, options?: PasteOptions): Promise<void>;
 ```
 
 #### Example
@@ -80,6 +80,7 @@ export default async function Command() {
 | Name                                      | Description                          | Type                                                              |
 | ----------------------------------------- | ------------------------------------ | ----------------------------------------------------------------- |
 | content<mark style="color:red;">\*</mark> | The content to insert at the cursor. | `string` or `number` or [`Clipboard.Content`](#clipboard.content) |
+| options                                   | Options for the paste operation.     | [`Clipboard.PasteOptions`](#clipboard.pasteoptions)               |
 
 #### Return
 
@@ -221,5 +222,15 @@ Type of options passed to `Clipboard.copy`.
 | Property  | Description                                                                                                            | Type      |
 | --------- | ---------------------------------------------------------------------------------------------------------------------- | --------- |
 | concealed | Indicates whether the content be treated as confidential. If `true`, it will not be recorded in the Clipboard History. | `boolean` |
+
+### Clipboard.PasteOptions
+
+Type of options passed to `Clipboard.paste`.
+
+#### Properties
+
+| Property        | Description                                                                                                                         | Type      |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| closeMainWindow | Whether to close the Raycast main window when pasting. Set to `false` to keep it open while pasting into the frontmost application. | `boolean` |
 
 

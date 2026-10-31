@@ -48,9 +48,9 @@ export default async function Command() {
 
 #### Parameters
 
-| Name | Description                                                                                                                   | Type            |
-| ---- | ----------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| path | The path of the file or folder to get the applications for. If no path is specified, all installed applications are returned. | `"fs".PathLike` |
+| Name | Description                                                                                                                   | Type                 |
+| ---- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| path | The path of the file or folder to get the applications for. If no path is specified, all installed applications are returned. | `"node:fs".PathLike` |
 
 #### Return
 
@@ -79,9 +79,9 @@ export default async function Command() {
 
 #### Parameters
 
-| Name                                   | Description                                                        | Type            |
-| -------------------------------------- | ------------------------------------------------------------------ | --------------- |
-| path<mark style="color:red;">\*</mark> | The path of the file or folder to get the default application for. | `"fs".PathLike` |
+| Name                                   | Description                                                        | Type                 |
+| -------------------------------------- | ------------------------------------------------------------------ | -------------------- |
+| path<mark style="color:red;">\*</mark> | The path of the file or folder to get the default application for. | `"node:fs".PathLike` |
 
 #### Return
 
@@ -136,9 +136,9 @@ export default async function Command() {
 
 #### Parameters
 
-| Name                                   | Description                     | Type            |
-| -------------------------------------- | ------------------------------- | --------------- |
-| path<mark style="color:red;">\*</mark> | The path to show in the Finder. | `"fs".PathLike` |
+| Name                                   | Description                     | Type                 |
+| -------------------------------------- | ------------------------------- | -------------------- |
+| path<mark style="color:red;">\*</mark> | The path to show in the Finder. | `"node:fs".PathLike` |
 
 #### Return
 
@@ -171,9 +171,9 @@ export default async function Command() {
 
 #### Parameters
 
-| Name                                   | Description                             | Type                                 |
-| -------------------------------------- | --------------------------------------- | ------------------------------------ |
-| path<mark style="color:red;">\*</mark> | The item or items to move to the trash. | `"fs".PathLike` or `"fs".PathLike[]` |
+| Name                                   | Description                             | Type                                           |
+| -------------------------------------- | --------------------------------------- | ---------------------------------------------- |
+| path<mark style="color:red;">\*</mark> | The item or items to move to the trash. | `"node:fs".PathLike` or `"node:fs".PathLike[]` |
 
 #### Return
 
